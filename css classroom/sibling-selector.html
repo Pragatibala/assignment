@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        display: flex;
+        justify-content: center;
+      }
+      .child {
+        width: 300px;
+        height: 300px;
+        background-color: cyan;
+      }
+      .child:nth-child(2) {
+        background-image: url(https://images.pexels.com/photos/13306877/pexels-photo-13306877.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);
+        background-size: 100%;
+      }
+      .child:nth-child(3) {
+        background-image: url(https://images.pexels.com/photos/18916074/pexels-photo-18916074/free-photo-of-brunette-in-retro-white-dress.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);
+        background-color: darkgoldenrod;
+        background-size: 60%;
+        background-repeat: no-repeat;
+      }
+      .child:nth-child(4) {
+        background-image: url(https://images.pexels.com/photos/19652315/pexels-photo-19652315/free-photo-of-woman-hand-holding-motivation-note.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load),
+          url(https://images.pexels.com/photos/19927917/pexels-photo-19927917/free-photo-of-police-car-near-radio-city-music-hall-in-new-york.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);
+        background-repeat: no-repeat;
+        background-size: 50%, cover;
+        background-position: center;
+      }
+
+      .child:nth-child(5) {
+        background-image: url(https://media3.giphy.com/media/TYgsCZuoDDeLK/giphy.webp?cid=790b76112el0d5ve24rcw2hbnfwi1zhw4ytpg4lrxvu2k7fj&ep=v1_gifs_search&rid=giphy.webp&ct=s),
+          url(https://images.pexels.com/photos/42415/pexels-photo-42415.jpeg?auto=compress&cs=tinysrgb&w=600);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">child1</div>
+      <div class="child">child2</div>
+      <div class="child">child3</div>
+      <div class="child">child4</div>
+      <div class="child">child5</div>
+    </div>
+  </body>
+</html>
