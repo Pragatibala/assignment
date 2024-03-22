@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .box {
+        width: 100%;
+        height: 500px;
+        position: relative;
+      }
+      .icons {
+        width: 50%;
+        height: 500px;
+        background-image: url(https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&w=600);
+        background-position: 30%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 50%;
+        top: 0;
+      }
+      .headline {
+        width: 50%;
+        height: 500px;
+        color: white;
+        padding: 40px;
+        background-color: rgba(13, 10, 10, 0.854);
+        position: absolute;
+        right: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 50px;
+      }
+      .content {
+        color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: end;
+        gap: 50px;
+        padding-left: 5px;
+        text-align: end;
+      }
+      h3 {
+        color: chocolate;
+        padding-bottom: 10px;
+      }
+      i {
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 68, 0, 0.817);
+        border-radius: 50%;
+        text-align: center;
+        padding-top: 10px;
+        color: black;
+        box-shadow: 0px 0px 5px black;
+        border: 1px solid black;
+      }
+      .web > i {
+        position: absolute;
+        right: -20px;
+        bottom: 300px;
+        z-index: 1;
+      }
+      .print > i {
+        position: absolute;
+        right: -20px;
+        bottom: 170px;
+        z-index: 1;
+      }
+      .photo > i {
+        position: absolute;
+        right: -20px;
+        bottom: 40px;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="headline">
+        <h1>OUR SERVICES</h1>
+        <div class="content">
+          <div class="web">
+            <h3>WEB DESIGN</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+            repellendus nam blanditiis culpa adipisci vero neque laboriosam
+            accusantium! Officia odit praesentium alias
+            <i class="fa-solid fa-display"></i>
+          </div>
+          <div class="print">
+            <h3>PRINT DESIGN</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+            repellendus nam blanditiis culpa adipisci vero neque laboriosam
+            accusantium! Officia odit praesentium alias
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <div class="photo">
+            <h3>PHOTOGRAPHY</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+            repellendus nam blanditiis culpa adipisci vero neque laboriosam
+            accusantium! Officia odit praesentium alia
+            <i class="fa-solid fa-camera-retro"></i>
+          </div>
+        </div>
+      </div>
+      <div class="icons"></div>
+    </div>
+  </body>
+</html>

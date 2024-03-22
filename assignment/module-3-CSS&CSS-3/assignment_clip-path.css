@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.hero-page {
+  width: 100%;
+  height: 500px;
+  background-image: url(https://images.pexels.com/photos/36487/above-adventure-aerial-air.jpg?auto=compress&cs=tinysrgb&w=600);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 84%, 49% 100%, 0 82%);
+}
+.head {
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+}
+.logo {
+  font-weight: bolder;
+  font-size: x-large;
+  border: 4px solid white;
+  height: 45px;
+  text-align: center;
+  /* padding-top: 5px;
+  padding-right: 5px; */
+}
+.nav {
+  display: flex;
+  gap: 20px;
+  padding-top: 10px;
+}
+a {
+  color: rgb(247, 206, 206);
+  font-size: x-small;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  gap: 30px;
+  color: antiquewhite;
+}
+h1 {
+  font-weight: bold;
+  font-size: 65px;
+  color: rgb(238, 193, 33);
+  box-shadow: 0px 0px 10px gray;
+}
+p {
+  width: 500px;
+}
+.bnts {
+  display: flex;
+  gap: 30px;
+}
+.start-bnt,
+.more-bnt {
+  border: 2px solid;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  padding-top: 3px;
+  background-color: rgba(255, 68, 0, 0.899);
+  border-radius: 10px;
+}
+.arrow-down {
+  position: absolute;
+  bottom: 80px;
+  left: 580px;
+  color: rgb(244, 11, 11);
+  background-color: antiquewhite;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 6px;
+  /* z-index: 3; */
+}
+.foot {
+  height: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+  text-align: center;
+}
+.foot > div > p {
+  color: black;
+  font-size: small;
+  padding-top: 20px;
+  width: 250px;
+}
+.foot > div > i {
+  margin-bottom: 15px;
+  padding: 20px;
+  background-color: gray;
+  border: 1px solid rgba(0, 0, 0, 0.813);
+  transition: all 300ms;
+}
+
+.foot > div > i:hover {
+  transform: rotate(-45deg);
+  background-color: rgb(249, 103, 46);
+  box-shadow: 0px 0px 20px red;
+}
+span {
+  background-color: aliceblue;
+  color: black;
+  font-weight: bolder;
+}
