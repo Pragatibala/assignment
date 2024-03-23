@@ -30,6 +30,19 @@ After making the changes we need to confirm the compatibility if they appear. Th
 
 ## ans:
 
+The biggest difference between CSS2 and CSS3 is that CSS3 has been split into different sections, called modules. Each of these modules is making its way through the W3C in various stages of the recommendation process
+New features: CSS3 adds a number of new features to CSS2, including
+CSS3
+Flexbox: Flexbox is a layout module that makes it easier to create responsive layouts.
+Grid: Grid is a layout module that provides more control over the layout of elements on a web page.
+Animations: CSS3 adds support for animations, which can be used to create more dynamic web pages.
+Transitions: CSS3 adds support for transitions, which can be used to create smooth transitions between states of an element.
+Responsive design (media query) is supportable.
+border-box property does support.
+animation & transform property supported.
+used google fonts & special fonts.
+good collection colors, HSL, RGBA, HSLA & gradient colors.
+pseudo element (::) & pseudo class (:) are working.
 CSS2
 Responsive design (media query) is not supportable.
 border-box property doesn't support.
@@ -37,20 +50,13 @@ animation & transform property not supported.
 used some selected fonts used.
 set of standard color & used color schemes only.
 pseudo element & pseudo class are not working.
-CSS3
-Responsive design (media query) is supportable.
-border-box property does support.
-animation & transform property supported.
-used google fonts & special fonts.
-good collection colors, HSL, RGBA, HSLA & gradient colors.
-pseudo element (::) & pseudo class (:) are working.
 
 # Q.4: Name a few CSS style components
 
 ## ans:
 
+CSS consists of two components: Properties: These are human-readable identifiers that indicate which stylistic features you want to modify. For example, font-size , width , background-color . Values: Each property is assigned a value.
 CSS style components used to a interactive web page design.
-Css style components used property & it's value.
 syntax: property-name: value;
 example : color, background-color, background-image, font-size, font-family, border, border-radius...etc
 
@@ -65,7 +71,7 @@ border: 1px solid black;
 
 ## ans:
 
-Opacity describe the Transparency of the Element.
+The opacity CSS property sets the opacity of an element. Opacity is the degree to which content behind an element is hidden, and is the opposite of transparenc
 Text Opacity value: 0.0 to 1.0 or 0% to 100%.
 lower value is 0.0 or 0%
 higher value is 1.0 or 100%
@@ -75,14 +81,15 @@ background color opacity high then text opacity also high.
 img {
 opacity: 0.5; (50% opacity)
 }
-
 background: rgba(76, 175, 80, 0.3) (30% opacity)
 
 # Q.6: How can the background color of an element be changed?
 
 ## ans:
 
-Syntex : background-color: color_name;
+To add background color in HTML, use the CSS background-color property. Set it to the color name or code you want and place it inside a style attribute. Then add this style attribute to an HTML element, like a table, heading, div, or span tag.
+We can set background color by selecting the element by its class name of id name and then apply the background-color property on it to set the background color.
+Syntax: background-color: color_name;
 background-color: red;
 3 types of color used in background-color: RGB, HSL, HSLA
 RGB color used 3 colors (red, green, blue) value
@@ -96,8 +103,7 @@ background-color:hsla(120,100%,25%,0.3);
 
 ## ans:
 
-background-repeat property that will help us to control the repetition of the image.
-background-repeat property in CSS is used to repeat the background image both horizontally and vertically.
+image repetition of the backup be controlled by using the background-repeat property that will help us to control the repetition of the image. The background-repeat property in CSS is used to repeat the background image both horizontally and vertically. It also decides whether the background image will be repeated or not.
 background-repeat: repeat;
 background-repeat: repeat-x;
 background-repeat: repeat-y;
@@ -108,8 +114,7 @@ background-repeat: no-repeat;
 
 ## ans:
 
-The background-position CSS property sets the initial position for each background image.
-multiple position used
+The background-position CSS property sets the initial position for each background image. The position is relative to the position layer set by background-origin
 example: background-position: value;
 value used in px, %
 horizontal or vertical position also used.
@@ -123,7 +128,7 @@ background-position: bottom 20px left 10px;
 
 ## ans:
 
-background-attachment property controls the image scroll in the background.
+The background-attachment property sets whether a background image scrolls with the rest of the page, or is fixed.To keep your background fixed, scroll, or local in CSS, we have to use the background-attachment property. Background-attachment: This property is used in CSS to set a background image as fixed or scroll. The default value of this property is scroll.
 example: background-attachment:scroll
 background image's position is fixed within the viewport, or scrolls with its containing block.
 The image will remain fixed in its position until the block scrolls.. and then when the block scrolls, the image will also move with it.
@@ -132,6 +137,8 @@ The image will remain fixed in its position until the block scrolls.. and then w
 
 ## ans:
 
+Why background and color are the separate properties if they should always be set together? There are two reasons behind this:
+It enhances the legibility of style sheets. The background property is a complex property in CSS, and if it is combined with color, the complexity will further increase
 background color property used to specify color of an element.
 background-image property used to one or more images of an element.
 gradient color value used in background-image property.
@@ -145,7 +152,7 @@ background-image: url('image.png');
 
 ## ans:
 
-CSS1 in margin property used to block element automatically center.
+Center block elements using margin property: We need to specify the margin from left and right such that it looks centered. We do not need to do this manually, we have one property value “auto” which will automatically set the margin such that our block element is placed in the center.
 margin value 'auto' then block elements are center.
 Another way to <center> tag used to block element center.
 now not working <center> tag because it's new version (CSS3) is available.
@@ -154,26 +161,25 @@ now not working <center> tag because it's new version (CSS3) is available.
 
 ## ans:
 
-The CSS specifications are maintained by the World Wide Web Consortium (W3C) & HTTP/HTTPS.
-The developer's work is to write the code, the browser's work is to run the code. And the work of maintaining that browser is w3c.
+The CSS specifications are maintained by the World Wide Web Consortium (W3C). Even though every browser supports CSS, there are many inconsistencies in the supported specification version. Some browsers even have their own implementation of the specification and have proprietary (vendor) prefixes.The developer's work is to write the code, the browser's work is to run the code. And the work of maintaining that browser is w3c.
+The Specification defines how CSS properties should be implemented by browser vendors along with detailed algorithms, code samples and tabular information. The Specification also include: The syntax and data types of the language. Detailed explanation on CSS Selectors
 
 # Q.13: What are the ways to integrate CSS as a web page?
 
 ## ans:
 
+CSS may be added to HTML in three different ways. To style a single HTML element on the page, use Inline CSS in a style attribute. By adding CSS to the head section of our HTML document, we can embed an internal stylesheet. We can also connect to an external stylesheet that separates our CSS from our HTML.
 CSS integrated in 3 ways :
-Internal CSS
-Inline CSS
-External CSS
-Internal CSS: It is used any css style <style> </style> tag in <head> </head> part of an HTML file.
-Inline CSS: It is used any css style in a single line in a <body> </body> part of an HTML file.
-External CSS: It is used any css style then make some css file & attach it's css file link in <head> </head> part of an HTML file.
+Internal CSS: By adding CSS to the head section of our HTML document, we can embed an internal stylesheet,It is used any css style <style> </style> tag in <head> </head> part of an HTML file.
+Inline CSS: To style a single HTML element on the page, use Inline CSS in a style attribute.It is used any css style in a single line in a <body> </body> part of an HTML file.
+External CSS: We can also connect to an external stylesheet that separates our CSS from our HTML.It is used any css style then make some css file & attach it's css file link in <head> </head> part of an HTML file.
 
 # Q.14: What is embedded style sheets?
 
 ## ans:
 
 Embedded style means Internal style.
+An embedded style sheet is declared within the <head> element of an HTML document. It applies to the whole document, rather than just one element. Each style declaration (or CSS rule) gets applied to everything in the document that matches that rule.
 It is declared style in <head> </head> element of an HTML Document.
 The benefit of embedded style sheets is that they load immediately with the page itself.
 this style can be benefit from good download speed & it's performance.
@@ -182,7 +188,7 @@ this style can be benefit from good download speed & it's performance.
 
 ## ans:
 
-create separate css file & then create css file link attach in the head section of the HTML document.
+An external style sheet is a separate CSS file that can be accessed by creating a link within the head section of the webpage. Multiple webpages can use the same link to access the stylesheet. The link to an external style sheet is placed within the head section of the page. create separate css file & then create css file link attach in the head section of the HTML document.
 Multiple web page design the same css file link access the stylesheet.. it is external style sheet benefit.
 External files occupy less space and code runs faster.
 
@@ -203,11 +209,17 @@ External files occupy less space and code runs faster.
 
 External style sheet : create separate css file & then create css file link attach in the head section of the HTML document.
 Advantages:
+With the help of External Style Sheets, the styles of numerous documents can be organized from one single file.
+In External Style Sheets, Classes can be made for use on numerous HTML element types in many forms of the site.
+In complex contexts, Methods like selector and grouping can be implemented to apply styles.
 Apply same style in multiple web pages (Global styling).
 Less consuming Time & fast run program of web pages.
 Responsive web page design for different devices.
 Reduce risk of Inconsistency.
 Disadvantages :
+An extra download is essential to import style information for each file.
+The execution of the file may be deferred till the external style sheet is loaded.
+While implementing style sheets, we need to test Web pages with multiple browsers in order to check compatibility issues.
 some times global styling used then override style in elements & tags of HTML.
 same class or id used then also override stle is autometically apply that is the limited control.
 Sometimes when we load a webpage, the html page comes but the style given to it doesn't come immediately...that is, external css takes time to load.
@@ -216,15 +228,17 @@ Sometimes when we load a webpage, the html page comes but the style given to it 
 
 ## ans:
 
+A CSS selector is the first part of a CSS Rule. It is a pattern of elements and other terms that tell the browser which HTML elements should be selected to have the CSS property values inside the rule applied to them.
 Selector is used to style global, specific attribute, specific element & specific tag & particular any class or id.
 many selectors are used like:
-universal selector (\*)
-descendant selector ( .parent .child )
-combinator selector ( .parent.child )
-group selector ( .parent, child )
-adjacent sibling ( .parent + .child )
-general sibling ( .parent ~ .child )
-child selector ( .child )
+Element Type Selectors.
+Descendant Selectors.
+Class selectors.
+Id Selectors.
+Child Selectors.
+Adjacent sibling selectors.
+Pseudo Selectors.
+Universal Selectors.
 
 # Q.18: What are the media types allowed by CSS?
 
@@ -245,9 +259,9 @@ example:
 
 # Q.19: What is the rule set?
 
-##
+## ans:
 
-ans: selectors and declaration block are together it's called css rule set.
+A rule set is a collection of one or many rules that are executed together as a single unit against a specific set of records (either from one source or a set of conjoined sources) and generate several levels of statistics. selectors and declaration block are together it's called css rule set.
 selector are 2 types used: id selector (#) & class selector (.) multiple
 property & it's values used are in a declaration block. syntax: selector{
 declaration block ( property : value ); } .parent, .child{ background-color:

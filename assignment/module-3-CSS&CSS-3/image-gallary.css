@@ -3,14 +3,15 @@
   margin: 0;
 }
 .image-gallary {
-  width: 1000px;
-  height: 850px;
+  width: 100%;
+  height: 1000px;
   background-color: black;
   display: flex;
+  justify-content: space-between;
 }
 .collage {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(4, 200px);
   row-gap: 10px;
   column-gap: 10px;
@@ -63,14 +64,13 @@ img {
   gap: 20px;
   align-items: end;
   font-size: smaller;
-  margin-left: 70px;
+  margin-left: 50px;
 }
 .nav {
   color: bisque;
   display: flex;
   flex-direction: column;
   align-items: end;
-  /* align-content: end; */
   gap: 20px;
 }
 .icon {
@@ -82,4 +82,49 @@ img {
 a {
   color: white;
   font-size: smaller;
+}
+@media (max-width: 425px) {
+  .image-gallary {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .collage {
+    height: 940px;
+  }
+  .box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px 20px;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+}
+@media (max-width: 320px) {
+  .image-gallary {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  /* .collage {
+    height: 940px;
+  } */
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
 }

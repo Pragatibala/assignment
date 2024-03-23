@@ -39,14 +39,10 @@ button {
   color: black;
   background-color: rgba(132, 228, 231, 0.868);
 }
-button:hover h1 {
+h1:hover {
   background-image: url(https://media.istockphoto.com/id/1023819892/photo/underwater-world-with-school-fish-swim-above-a-coral-reef-and-sun-light.jpg?s=1024x1024&w=is&k=20&c=SdPuhNyIfSVBvdAmOs_9iZ6PWX8m2faYcXVh9Yfzfl4=);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 30%;
   font-size: xx-small;
-}
-
-button:hover + h2 {
-  color: red;
 }

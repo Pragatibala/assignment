@@ -26,8 +26,6 @@
   border: 4px solid white;
   height: 45px;
   text-align: center;
-  /* padding-top: 5px;
-  padding-right: 5px; */
 }
 .nav {
   display: flex;
@@ -71,7 +69,7 @@ p {
 }
 .arrow-down {
   position: absolute;
-  bottom: 80px;
+  bottom: -440px;
   left: 580px;
   color: rgb(244, 11, 11);
   background-color: antiquewhite;
@@ -81,7 +79,6 @@ p {
   border-radius: 50%;
   text-align: center;
   padding-top: 6px;
-  /* z-index: 3; */
 }
 .foot {
   height: 200px;

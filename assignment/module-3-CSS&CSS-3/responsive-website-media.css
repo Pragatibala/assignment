@@ -61,88 +61,70 @@
     width: 60%;
     justify-content: end;
   }
-
   .wrapper .header-btn {
     width: 30%;
     justify-content: end;
   }
-
   .get-btn {
     padding: 10px 20px;
   }
-
   .menubar {
     display: none;
   }
-
   label .menubar {
     display: none;
   }
-
   .timeline-section {
     width: 100%;
     margin-top: 50px;
     justify-content: center;
   }
-
   .timeline-section .timeline-img {
     width: 60%;
     padding: 0px 30px;
   }
-
   .timeline-section .timeline-content {
     width: 40%;
     justify-content: space-around;
   }
-
   .timeline-section .timeline-content .timeline-process {
     width: 100%;
   }
-
   .timeline-section .timeline-content .timeline-process p {
     width: 90%;
   }
-
   .work-easier {
     width: 100%;
   }
-
   .work-easier .cards {
     grid-template-columns: repeat(3, auto);
     padding: 0px 50px;
     gap: 20px;
   }
-
   .work-easier .cards .card-box {
     width: 100%;
     padding: 20px 20px;
   }
-
   .work-easier .cards .card-box .circle {
     width: 60px;
     height: 60px;
   }
-
   .work-easier .cards .card-box .heading {
     font-size: 18px;
     margin-top: 15px;
   }
-
   .work-easier .cards .card-box p {
     font-size: 14px;
     margin-top: 5px;
   }
-
   .how-you-work {
     width: 100%;
     padding: 50px 100px;
   }
-
   .how-you-work .work-content {
     width: 50%;
     padding: 0px 20px;
   }
-
   .how-you-work .work-content h3 {
     font-size: 35px;
   }
@@ -218,7 +200,7 @@
   }
 
   .wrapper nav {
-    width: 70%;
+    /* width: 70%; */
     justify-content: start;
   }
 
