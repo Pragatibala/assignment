@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .child {
+        width: 100px;
+        height: 100px;
+        padding: 2px;
+        border: 2px dotted black;
+        background-color: aqua;
+      }
+      .child1 + .child + .child {
+        background-color: black;
+      }
+      .child ~ .child {
+        background-color: chartreuse;
+      }
+      .child1 + .child {
+        background-color: blue;
+      }
+      .child:last-child {
+        background-color: chocolate;
+      }
+
+      .child[data-attribute$="jeon"] {
+        background-color: darkgreen;
+      }
+      .child[data-attribute^="jeon"] {
+        background-color: deeppink;
+      }
+      .child[data-attribute~="jeon"] {
+        background-color: crimson;
+      }
+      .child[data-attribute="chimi"] {
+        background-color: gold;
+      }
+      .child[data-attribute="rm"] {
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child child1">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child" data-attribute="jeon jk">5</div>
+      <div class="child" data-attribute="rm">6</div>
+      <div class="child" data-attribute="jkjeon">7</div>
+      <div class="child" data-attribute="jeonjk">8</div>
+      <div class="child" data-attribute="chimi">9</div>
+      <div class="child">10</div>
+    </div>
+  </body>
+</html>

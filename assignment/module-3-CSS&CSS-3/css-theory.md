@@ -253,7 +253,6 @@ print (documents viewed on screen in print preview mode)
 & other are tv, handheld, aural, braille, embossed, tty, projection.
 mead types are case-sensitive.
 example:
-
 @media all { div{ background-color: lightblue; font-family: 'poppins', 'serif';
 } p{ color: black; text-align: center; } }
 

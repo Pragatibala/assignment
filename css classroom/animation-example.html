@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .boxes {
+        display: flex;
+        gap: 20px;
+        animation-name: goRound;
+        animation-duration: 2000ms;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+        animation-iteration-count: infinite;
+      }
+      .box {
+        height: 50px;
+        width: 50px;
+        /* border-radius: 5px; */
+        border-radius: 50%;
+        animation-name: loader;
+        animation-duration: 600ms;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+      }
+      .box:nth-child(1) {
+        background-color: yellowgreen;
+        animation-delay: 100ms;
+      }
+      .box:nth-child(2) {
+        background-color: violet;
+        animation-delay: 300ms;
+      }
+      .box:nth-child(3) {
+        background-color: tomato;
+        animation-delay: 500ms;
+      }
+      .box:nth-child(4) {
+        background-color: turquoise;
+        animation-delay: 700ms;
+      }
+      .box:nth-child(5) {
+        background-color: teal;
+        animation-delay: 900ms;
+      }
+
+      @keyframes loader {
+        0% {
+          transform: scale(1);
+          /* opacity: 1; */
+        }
+        100% {
+          transform: translateY(-50px) scale(0.2);
+          /* transform: ; */
+          /* opacity: 0.2; */
+        }
+      }
+
+      @keyframes goRound {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxes">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

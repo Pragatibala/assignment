@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        width: 100vw;
+        height: 60px;
+        background-color: cornflowerblue;
+        border-radius: 10px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 5px 10px rgb(100, 95, 95);
+        transition: all 300ms;
+        padding: 0 20px;
+      }
+      .parent:hover {
+        box-shadow: 0px 5px 10px rgb(100, 95, 95) inset;
+      }
+      .child1 {
+        font-size: xx-large;
+      }
+      .menus {
+        width: 60%;
+        display: flex;
+        font-size: x-large;
+        gap: 20px;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child1">Codinglab</div>
+      <div class="menus">
+        <div class="child2">Home</div>
+        <div>Services</div>
+        <div>Products</div>
+        <div>Contact us</div>
+      </div>
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </body>
+</html>

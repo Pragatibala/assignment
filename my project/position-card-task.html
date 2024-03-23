@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100%;
+        height: 500px;
+        background-color: darkslategrey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        width: 35em;
+        height: 250px;
+        background-color: burlywood;
+        text-align: center;
+        position: sticky;
+        top: 10px;
+        outline: 5px solid rgb(58, 4, 22);
+        box-shadow: 0px 0px 20px purple;
+      }
+      .box:hover {
+        background-color: rgba(46, 19, 71, 0.727);
+      }
+      .box:hover .card {
+        outline-offset: 10px;
+        background-image: url(https://images.pexels.com/photos/20281274/pexels-photo-20281274/free-photo-of-see-im-abendrot.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);
+        transition: transform;
+        color: rgb(2, 2, 49);
+      }
+      .box:hover img {
+        transform: translateX(545px);
+        border: 3px solid black;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: -20px;
+        left: -35px;
+        border: 3px solid brown;
+      }
+      .box:hover .bnt {
+        background-color: chartreuse;
+        animation-name: bnt-anime;
+        animation-duration: 2000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-delay: 100ms;
+      }
+      .bnt {
+        width: 100px;
+        height: 30px;
+        background-color: darkgoldenrod;
+        text-align: center;
+        border-radius: 15px;
+        /* text-align: center;
+         */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 50px;
+        left: 220px;
+        transform: translatey(-50px);
+      }
+      @keyframes bnt-anime {
+        50% {
+          transform: translateX(200px);
+        }
+        100% {
+          transform: translateX(-200px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="card">
+        <h1>CSS Positioning</h1>
+        <img
+          src="https://images.pexels.com/photos/20330737/pexels-photo-20330737/free-photo-of-white-dog-sitting-on-grass.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+        />
+        <p>
+          The posotion property specifies the type of positioning method used
+          for an element(static,relative,absolute,fixed,or sticky).
+        </p>
+        <div class="bnt">Read More</div>
+      </div>
+    </div>
+    <div class="abd" style="height: 1000px"></div>
+  </body>
+</html>
