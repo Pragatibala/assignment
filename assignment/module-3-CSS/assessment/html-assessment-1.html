@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .nav-box {
+        width: 100vw;
+        height: 60px;
+        background-color: rgb(18, 94, 234);
+        /* border-radius: 10px; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 5px 10px rgb(100, 95, 95);
+        transition: all 300ms;
+        padding: 0 20px;
+      }
+      img {
+        width: 10vw;
+        height: 30px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .nav {
+        width: 60%;
+        display: flex;
+        gap: 20px;
+        justify-content: end;
+      }
+      a {
+        color: white;
+        font-weight: bold;
+      }
+      .bnt-login {
+        width: 100px;
+        height: 30px;
+        background-color: aliceblue;
+        text-align: center;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-box">
+      <div class="logo">
+        <img
+          src="https://dynamic.brandcrowd.com/asset/logo/bb352266-5a4d-4f06-a914-ec69460497e9/logo-search-grid-1x?logoTemplateVersion=1&v=638191288138870000"
+          alt="logo"
+        />
+      </div>
+      <div class="nav">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <label for="course-list">Services</label>
+        <input type="checkbox" id="course-list" />
+        <!-- <a href="">Services</a> -->
+        <datalist id="course-list">
+          <option value="full stack"></option>
+          <option value="front end"></option>
+          <option value="back end"></option>
+          <option value="data science"></option>
+          <option value="web designing"></option>
+          <option value="3d animation"></option>
+          <option value="DevOps"></option>
+        </datalist>
+        <a href="">Blogs</a>
+        <a href="">Contact</a>
+      </div>
+      <div class="bnt-login">Login</div>
+    </div>
+  </body>
+</html>
