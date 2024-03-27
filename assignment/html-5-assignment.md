@@ -31,7 +31,7 @@ Syntax:
 
 Create a new HTML file in the same directory, called index. html . Add <audio> and <video> elements to the page; make them display the default browser controls. Give both of them <source> elements so that browsers will find the audio format they support best and load it.
 
-# Q.3 : • Semantic element in HTML5?
+# Q.3 : Semantic element in HTML5?
 
 ## ans:
 

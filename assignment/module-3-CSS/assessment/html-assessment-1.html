@@ -41,6 +41,7 @@
       a {
         color: white;
         font-weight: bold;
+        position: relative;
       }
       .bnt-login {
         width: 100px;
@@ -48,6 +49,23 @@
         background-color: aliceblue;
         text-align: center;
         padding: 5px;
+      }
+      .menu {
+        position: absolute;
+        top: 50px;
+        background-color: dodgerblue;
+        border: 1px solid black;
+        color: black;
+        font-weight: lighter;
+      }
+      .sub-menu {
+        position: absolute;
+        left: 80px;
+        top: 8 0px;
+        background-color: dodgerblue;
+        border: 1px solid black;
+      }
+      #course-list:hover {
       }
     </style>
   </head>
@@ -62,15 +80,25 @@
       <div class="nav">
         <a href="">Home</a>
         <a href="">About</a>
-        <label for="course-list">Services</label>
+        <label for="course-list"></label>
         <!-- <input type="checkbox" id="course-list" list="course-list" /> -->
-        <a href="" id="course-list">Services</a>
-        <datalist id="course-list">
-          <option value="web design">web design</option>
-          <option value="marketing">marketing</option>
-          <option value="wordpress">wordpress</option>
-          <option value="more">more</option>
-        </datalist>
+        <a href="" id="course-list"
+          >Services
+          <div class="menu">
+            <div class="web">web design</div>
+            <div class="market">marketing</div>
+            <div class="word">wordpress</div>
+            <div class="more">
+              more
+              <div class="sub-menu">
+                <div class="html">HTML</div>
+                <div class="css">CSS</div>
+                <div class="js">JavaScript</div>
+                <div class="jq">jQuery</div>
+              </div>
+            </div>
+          </div>
+        </a>
         <a href="">Blogs</a>
         <a href="">Contact</a>
       </div>
