@@ -2,7 +2,7 @@
 
 ## ans:
 
-These new elements add advanced functional features, improvised page layouts, and other improvements. The commonly used new HTML5 tags are <figure>, <article>, <header>, <aside>,<audio>,<aside>,<main>,<footer>, <nav>,<section>,<canvas>,<datalist>,<embed> and <video> .
+These new elements add advanced functional features, improvised page layouts, and other improvements. The commonly used new HTML5 tags are `<figure>, <article>, <header>, <aside>,<audio>,<aside>,<main>,<footer>, <nav>,<section>,<canvas>,<datalist>,<embed> and <video> `.
 
 <figure> : Adds self-contained content like illustrations, diagrams, or photos.
 <article> : Represents an independent article with content separate from the rest of the site.
