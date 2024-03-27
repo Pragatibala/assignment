@@ -4,19 +4,19 @@
 
 These new elements add advanced functional features, improvised page layouts, and other improvements. The commonly used new HTML5 tags are `<figure>, <article>, <header>, <aside>,<audio>,<aside>,<main>,<footer>, <nav>,<section>,<canvas>,<datalist>,<embed> and <video> `.
 
-<figure> : Adds self-contained content like illustrations, diagrams, or photos.
-<article> : Represents an independent article with content separate from the rest of the site.
-<header> : Contains information related to the title and heading of the content.
-<aside> : Describes content related to the main object of the web page but not its main intent.
-<audio> : Used to insert audio into an HTML webpage.
-<footer> : Defines a footer containing information like author details and copyright.
-<nav> : Declares the navigational section of HTML documents.
-<section> : Defines a section of documents, dividing content into sections and subsections.
-<canvas> : Used to draw graphics on a web page using JavaScript.
-<datalist> : Provides autocomplete feature for input elements.
-<details> : Used for initially hidden content that can be displayed interactively.
-<embed> : Embeds external multimedia content like audio or video into an HTML document.
-<video> : Embeds video content such as movie clips in a document.
+-figure : Adds self-contained content like illustrations, diagrams, or photos.
+-article : Represents an independent article with content separate from the rest of the site.
+-header : Contains information related to the title and heading of the content.
+-aside : Describes content related to the main object of the web page but not its main intent.
+-audio : Used to insert audio into an HTML webpage.
+-footer : Defines a footer containing information like author details and copyright.
+-nav : Declares the navigational section of HTML documents.
+-section : Defines a section of documents, dividing content into sections and subsections.
+-canvas : Used to draw graphics on a web page using JavaScript.
+-datalist : Provides autocomplete feature for input elements.
+-details : Used for initially hidden content that can be displayed interactively.
+-embed : Embeds external multimedia content like audio or video into an HTML document.
+-video : Embeds video content such as movie clips in a document.
 
 # Q.2 : How to embed audio and video in a webpage?
 
