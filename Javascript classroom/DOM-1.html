@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .card {
+        width: 200px;
+        height: 400px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: antiquewhite;
+        text-align: center;
+        padding: 5px;
+        border: 1px solid;
+      }
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 1px solid;
+      }
+      /* .content {
+        padding-bottom: 50px;
+        padding-left: 10px; */
+
+      .bnt {
+        width: 100px;
+        height: 30px;
+        border-radius: 12px;
+        background-color: rgb(4, 115, 115);
+        color: black;
+        border: 1px solid rgba(0, 0, 0, 0.787);
+        padding: 5px;
+        margin-left: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="img">
+        <img
+          src="https://media.istockphoto.com/id/1947308378/photo/tropical-beach-with-sunrise-or-sunset-and-quiet-ocean-in-maldives.jpg?b=1&s=612x612&w=0&k=20&c=GEqI1ZxtD5F9yABByt5HBmAkNRBqnXmzfh18wF5dhJo="
+          alt="image"
+        />
+      </div>
+      <div class="content">
+        Name - Vanshita tiwari <br />
+        Frontend developer <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+          voluptatibus ex mollitia. Facere illum delectus cumque eos error dicta
+          quod
+        </p>
+      </div>
+      <div class="bnt">get start</div>
+    </div>
+    <script>
+      let cardElement = document.getElementsByClassName("card");
+      console.log(cardElement);
+      cardElement[0].style.backgroundColor = "lightblue";
+      cardElement[0].style.border = "1px soild black";
+      let textElement = document.getElementsByClassName("content");
+      textElement[0].innerHTML = "<p>this is content of card</p>";
+    </script>
+  </body>
+</html>
