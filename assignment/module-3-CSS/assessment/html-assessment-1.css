@@ -21,15 +21,19 @@ img {
   border-radius: 10px;
 }
 .nav {
+  height: 100%;
   width: 60%;
   display: flex;
   gap: 20px;
   justify-content: end;
 }
 a {
+  height: 100%;
   color: white;
   font-weight: bold;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .bnt-login {
   width: 100px;
@@ -48,24 +52,54 @@ a {
 .jq {
   border: 1px solid rgba(0, 0, 0, 0.821);
   width: 80px;
-  padding: 2px;
+  padding: 3px;
+  transition: all 300ms;
+  border-radius: 3px;
+  margin: 2px 0px;
+  background-color: dodgerblue;
+  color: rgba(0, 0, 0, 0.682);
+}
+
+.services {
+  position: relative;
 }
 .menu {
   position: absolute;
-  top: 50px;
-  background-color: dodgerblue;
-  border: 1px solid black;
+  top: 80%;
+  /* border: 1px solid black; */
   color: black;
   font-weight: lighter;
   visibility: hidden;
+  transition: all 300ms;
 }
 .sub-menu {
   position: absolute;
   left: 90px;
   top: 70px;
-  background-color: dodgerblue;
-  border: 1px solid black;
+  /* background-color: dodgerblue; */
+  /* border: 1px solid black; */
 }
 a:hover .menu {
   visibility: visible;
+  top: 100%;
+}
+
+.web,
+.market,
+.word,
+.more {
+  /* padding: 5px; */
+}
+
+.web:hover,
+.market:hover,
+.word:hover,
+.more:hover,
+.html:hover,
+.css:hover,
+.js:hover,
+.jq:hover {
+  background-color: skyblue;
+  color: black;
+  font-weight: 500;
 }

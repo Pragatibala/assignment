@@ -37,6 +37,25 @@ Create a new HTML file in the same directory, called index. html . Add <audio> a
 
 Semantic HTML elements are those that clearly describe their meaning in a machine-readable way. Elements such as <header> , <footer> and <article> are all considered semantic because they accurately describe the purpose of the element and the type of content that is inside them.
 
+EXAMPLE:
+
+<section>
+<h1>semantic</h1>
+<p>Semantic HTML elements are those that clearly describe their meaning in a machine-readable way.</p>
+</section>
+
+<article>
+<h1>semantic</h1>
+<p>Semantic HTML elements are those that clearly describe their meaning in a machine-readable way.</p>
+</article>
+
+<header>
+for head content
+  </header>
+
+  <footer>
+</footer>
+
 # Q.4 : Canvas and SVG tags?
 
 ## ans:
