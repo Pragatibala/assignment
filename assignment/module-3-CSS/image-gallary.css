@@ -98,11 +98,20 @@ a {
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: 10px 20px;
+    padding: 2px 2px;
   }
   .nav {
     display: flex;
     flex-direction: row;
+    gap: 2px;
+  }
+  a {
+    font-size: smaller;
+  }
+  h1 {
+    font-size: large;
+  }
+  .icon {
     gap: 5px;
   }
 }
@@ -114,9 +123,9 @@ a {
     flex-direction: column-reverse;
     align-items: center;
   }
-  /* .collage {
-    height: 940px;
-  } */
+  h1 {
+    font-size: xx-large;
+  }
   .box {
     display: flex;
     flex-direction: column;

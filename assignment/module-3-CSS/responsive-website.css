@@ -70,7 +70,6 @@ header {
 }
 nav a {
   color: var(--black);
-  /* text-decoration: none; */
   font-weight: 500;
   font-size: 16px;
   padding: 0px 30px;
@@ -305,6 +304,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 50px;
 }
 .work-easier .cards .card-box .circle1 {
   background-color: #fef6ee;

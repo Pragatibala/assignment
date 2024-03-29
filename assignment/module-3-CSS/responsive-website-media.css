@@ -473,7 +473,7 @@
     justify-content: end;
   }
 
-  .header-logo {
+  .logo {
     width: 100%;
     justify-content: space-between;
   }
@@ -876,24 +876,19 @@
     flex-direction: column;
     justify-content: space-between;
   }
-
   #check-box:checked + .wrapper {
     display: none;
   }
-
   input {
     display: none;
   }
-
   label .menubar {
     display: block;
   }
-
-  .header-logo {
+  .logo {
     width: 100%;
     justify-content: space-between;
   }
-
   .wrapper {
     width: 100%;
     display: flex;
@@ -901,7 +896,6 @@
     justify-content: start;
     margin-top: 10px;
   }
-
   .wrapper nav {
     width: 100%;
     display: flex;
@@ -1070,6 +1064,7 @@
   .work-easier {
     width: 100%;
   }
+
   .work-easier .work-easier-content {
     margin-top: 30px;
     margin-bottom: 50px;
@@ -1078,7 +1073,7 @@
     grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(6, auto);
     gap: 5px;
-    margin: 0px 20px;
+    margin: 0px 10px;
   }
   .work-easier .cards .card-box {
     width: 100%;
