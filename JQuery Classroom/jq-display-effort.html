@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 50px;
+    }
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: rgba(114, 11, 210, 0.784);
+      border: 1px solid blueviolet;
+      margin: 20px;
+    }
+  </style>
+  <body>
+    <!-- <button id="show">show-click</button>
+    <button id="hide">hide-click</button>
+    <button id="toggle">toggle-click</button>
+    <div class="box"></div> -->
+    <!-- --------------------------------- -->
+    <button id="in">show-click</button>
+    <button id="out">hide-click</button>
+    <button id="to">toggle-click</button>
+    <button id="toggle">toggle-click</button>
+    <div class="box"></div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      // ----------------------------------------------------------------
+      // display efforts
+      //   $("#show").click(() => {
+      //     $(".box").show();
+      //   });
+      //   $("#hide").click(() => {
+      //     $(".box").hide();
+      //   });
+      //   $("#toggle").click(() => {
+      //     $(".box").toggle();
+      //   });
+      // ----------------------------------------------------------------
+      //   slide effort
+      //   $("#show").click(() => {
+      //     $(".box").slideDown();
+      //   });
+      //   $("#hide").click(() => {
+      //     $(".box").slideUp();
+      //   });
+      //   $("#toggle").click(() => {
+      //     $(".box").slideToggle();
+      //   });
+      // ----------------------------------------------------------------
+      //  fadding effort
+      $("#in").focus(() => {
+        $(".box").fadeIn();
+      });
+      $("#out").focus(() => {
+        $(".box").fadeOut();
+      });
+      $("#to").focus(() => {
+        $(".box").fadeTo("300", 0.6);
+      });
+      $("#toggle").focus(() => {
+        $(".box").fadeToggle();
+      });
+    </script>
+  </body>
+</html>

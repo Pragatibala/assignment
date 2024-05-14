@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function myFunction() {
+      //     console.log("hey this is my function");
+      //     console.log("hey this is my another function in js");
+      //   }
+      //   myFunction();
+      // function myfunction(n1, n2) {
+      //   console.log(`${n1} + ${n2} =${n1 + n2}`);
+      // }
+      // myfunction(7337, 6598);
+
+      // // arrow function
+      // let awMul = (j, k) => {
+      //   return j * k;
+      // };
+      // mul = awMul(8, 9);
+      // console.log(mul);
+
+      //creat a function and string as an argument
+
+      let count = 1;
+      let countvowels = (strg) => {
+        for (let char of strg) {
+          if (
+            char === "a" ||
+            char === "e" ||
+            char === "i" ||
+            char === "o" ||
+            char === "u"
+          ) {
+            count++;
+          }
+        }
+        console.log(count);
+      };
+      countvowels("heyThisIsBtsFromBoyBand");
+    </script>
+  </body>
+</html>

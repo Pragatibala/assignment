@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 400px;
+        height: 400px;
+        border: 1px solid;
+        background-color: antiquewhite;
+        margin: 20px auto;
+      }
+      .child {
+        width: 200px;
+        height: 200px;
+        border: 1px solid;
+        background-color: aqua;
+        margin: 100px auto;
+      }
+      .sub-child {
+        width: 100px;
+        height: 100px;
+        border: 1px solid;
+        background-color: coral;
+        margin: 50px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="box"></div>
+    <script>
+      let body = document.getElementsByTagName("body")[0];
+      let box = document.getElementsByClassName("box");
+      newElementimg = document.createElement("img");
+      newElementimg.setAttribute(
+        "src",
+        "https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      );
+      newElementimg.setAttribute("alt", "image of girl");
+      newElementimg.classList.add("img");
+      newElementimg.style.cssText =
+        "height:200px; width:200px; border:1px solid red; object-fit:cover;";
+      console.log(newElementimg);
+      body.append(newElementimg);
+    </script> -->
+
+    <div class="parent">
+      <div class="child">
+        <div class="sub-child"></div>
+      </div>
+    </div>
+    <script>
+      let parent = document.getElementsByClassName("parent")[0];
+      let child = document.getElementsByClassName("child")[0];
+      let subChild = document.getElementsByClassName("sub-child")[0];
+
+      // -------------------------------------------
+      // Bubbling OR propagation Events
+
+      // subChild.addEventListener("click", () => {
+      //   console.log("sub-child");
+      // });
+
+      // child.addEventListener("click", () => {
+      //   console.log("child");
+      // });
+
+      // parent.addEventListener("click", () => {
+      //   console.log("parent");
+      // });
+      // ----------------------------------------------
+
+      // stopPropagation in bubbling event
+
+      // subChild.addEventListener("click", (eventS) => {
+      //   eventS.stopPropagation();
+      //   console.log("sub-child");
+      // });
+      // child.addEventListener("click", (eventC) => {
+      //   eventC.stopPropagation();
+      //   console.log("child");
+      // });
+      // parent.addEventListener("click", (eventP) => {
+      //   eventP.stopPropagation();
+      //   console.log("parent");
+      // });
+
+      // -----------------------------------------
+      // Event Delegation
+
+      subChild.addEventListener("click", () => {});
+      child.addEventListener("click", () => {
+        console.log("this is subchild");
+        console.log("this is child");
+      });
+    </script>
+  </body>
+</html>

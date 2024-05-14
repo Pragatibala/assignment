@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      this is box
+      <p>this is p tag</p>
+    </div>
+    <input id="input" type="text" placeholder="enter the name" />
+    <button>submit</button>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $("button").click(() => {
+        // accessing  input
+        // console.log($("input")); //it will give the input tag
+        // console.log($("#input").val()); //it will give the value from input tag
+        // console.log($("#input").val("jungkook"));
+        //
+        //------------------------
+        //
+        //text method
+        // console.log($(".box").text()); //it gives innertext  of the box tag
+        // console.log($(".box").text("this is new text")); //it will overwrite the innertext from box
+        //
+        //------------------------
+        //
+        //HTML method
+        // console.log($(".box").html()); //it gives whole element or text  of the box tag
+        // console.log($(".box").html("<p>this is new html</p>")); //it will overwrite the innertext or html from box tag
+      });
+    </script>
+  </body>
+</html>

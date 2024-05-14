@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Maths Operations</h1>
+    Enter 1st Number: <input type="text" id="input1" /><br /><br />
+    Enter 2st Number: <input type="text" id="input2" /><br /><br />
+    <button id="add-bnt">+</button>
+    <button id="sub-bnt">-</button>
+    <button id="mult-bnt">*</button>
+    <button id="div-bnt">/</button>
+    <button id="mod-bnt">%</button>
+    <br /><br />
+    <p>Answer:</p>
+    <script>
+      document.getElementById("add-bnt").addEventListener("click", () => {
+        let num1 = document.getElementById("input1").value;
+        let num2 = document.getElementById("input2").value;
+        let result = parseInt(num1) + parseInt(num2);
+        document.getElementsByTagName("p")[0].innerHTML = "Answer: " + result;
+      });
+      document.getElementById("sub-bnt").addEventListener("click", () => {
+        let num1 = document.getElementById("input1").value;
+        let num2 = document.getElementById("input2").value;
+        let result = parseInt(num1) - parseInt(num2);
+        document.getElementsByTagName("p")[0].innerHTML = "Answer: " + result;
+      });
+      document.getElementById("mult-bnt").addEventListener("click", () => {
+        let num1 = document.getElementById("input1").value;
+        let num2 = document.getElementById("input2").value;
+        let result = parseInt(num1) * parseInt(num2);
+        document.getElementsByTagName("p")[0].innerHTML = "Answer: " + result;
+      });
+      document.getElementById("div-bnt").addEventListener("click", () => {
+        let num1 = document.getElementById("input1").value;
+        let num2 = document.getElementById("input2").value;
+        let result = parseInt(num1) / parseInt(num2);
+        document.getElementsByTagName("p")[0].innerHTML = "Answer: " + result;
+      });
+      document.getElementById("mod-bnt").addEventListener("click", () => {
+        let num1 = document.getElementById("input1").value;
+        let num2 = document.getElementById("input2").value;
+        let result = parseInt(num1) % parseInt(num2);
+        document.getElementsByTagName("p")[0].innerHTML = "Answer: " + result;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #myForm {
+        margin: 20px;
+        border: 1px solid black;
+        padding: 20px;
+        background-color: rgba(245, 185, 106, 0.831);
+        display: flex;
+        flex-direction: column;
+      }
+      input {
+        width: fit-content;
+        margin-top: 5px;
+        background-color: snow;
+      }
+      #bnt {
+        background-color: rgba(9, 67, 166, 0.791);
+        padding-left: 10px;
+        padding-right: 10px;
+        font-weight: bold;
+      }
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="myForm">
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        placeholder="Enter Your Username "
+      /><br />
+      <span id="userMsg"></span><br /><br />
+
+      <label for="password">Password:</label>
+      <input type="password" id="pw" placeholder="Enter Your Password" /><br />
+      <span id="pwMsg"></span><br /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter Your Email" /><br />
+      <span id="emailMsg"></span><br /><br />
+
+      <input type="submit" value="submit" id="bnt" />
+    </form>
+    <script>
+      const form = document.getElementById("myForm");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let isValid = true;
+        const userInput = document.getElementById("username");
+        const userError = document.getElementById("userMsg");
+        if (!userInput.value.trim()) {
+          userError.textContent = "Username is required";
+          isValid = false;
+        } else {
+          userError.textContent = "";
+        }
+        const passwordInput = document.getElementById("pw");
+        const pwError = document.getElementById("pwMsg");
+        if (!passwordInput.value.trim()) {
+          pwError.textContent = "Password is required";
+          isValid = false;
+        } else {
+          pwError.textContent = "";
+        }
+        const emailInput = document.getElementById("email");
+        const emailMsg = document.getElementById("emailMsg");
+        const emailPttrn = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailInput.value.trim()) {
+          emailMsg.textContent = "Email is required";
+          isValid = false;
+        } else if (!emailPttrn.test(emailInput.value.trim())) {
+          emailMsg.textContent = "Invalid email format";
+          isValid = false;
+        } else {
+          emailMsg.textContent = "";
+        }
+        if (isValid) {
+          form.submit();
+        }
+      });
+    </script>
+  </body>
+</html>

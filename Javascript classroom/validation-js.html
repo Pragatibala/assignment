@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" onclick="return  validateForm " novalidate>
+      <input type="email" id="email" placeholder="Enter your email" />
+      <p class="error-email"></p>
+      <input type="password" id="pw" placeholder="Enter your password" />
+      <p class="error-pw"></p>
+      <input type="number" id="num" placeholder="Enter your number" />
+      <p class="error-num"></p>
+      <button>LogIn</button>
+    </form>
+    <script>
+      const emailV = document.getElementById("email");
+      const pwValid = document.getElementById("pw");
+      const emailMsg = document.getElementsByClassName("error-email");
+      const passwordMsg = document.getElementsByClassName("error-pw");
+      const numMsg = document.getElementsByClassName("error-num");
+
+      // document
+      //   .getElementsByTagName("button")[0]
+      //   .addEventListener("click", () => {
+      //     // validateEmail(emailV);
+      //     validatePassword(pwValid);
+      //   });
+      function validateEmail(emailV) {
+        let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (emailV.match(mailformat)) {
+          // emailMsg.innerText = "Valid email address!";
+          alert("Valid email address!");
+          return true;
+        } else {
+          // emailMsg.innerText = "You have entered an invalid email address!";
+          alert("You have entered an invalid email address!");
+          return false;
+        }
+      }
+      function validatePassword(pwValid) {
+        let isPwEmpty;
+        let isPwGT12;
+        let isPwLT3;
+        let itHasDigit;
+        let isPwSmallChar;
+        let isPwCapitalChar;
+        let isPwHassSymbol;
+        isPwEmpty = pwValid.lenght == 0 ? true : false;
+        isPwGT12 = pwValid.lenght >= 12 ? true : false;
+        isPwLT3 = pwValid.lenght <= 3 ? true : false;
+        for (i = 0; i < pwValid.lenght; i++) {
+          if ("1234567890".match(pwValid[i])) {
+            itHasDigit = true;
+          } else {
+            itHasDigit = false;
+          }
+        }
+        if ("abcdefghijklmnopqrstuvwxyz".includes(pwValid[i])) {
+          isPwSmallChar = true;
+        } else {
+          isPwSmallChar = false;
+        }
+        if ("ABCDEFGHIJKLMNOPQRSTUVWXYZ".includes(pwValid[i])) {
+          isPwCapitalChar = true;
+        } else {
+          isPwCapitalChar = false;
+        }
+        if ("!@#$%^&*()+_-".includes(pwValid[i])) {
+          isPwHassSymbol = true;
+        } else {
+          isPwHassSymbol = false;
+        }
+        console.log(isPwEmpty);
+        console.log(isPwGT12);
+        console.log(isPwLT3);
+        console.log(isPwSmallChar);
+        console.log(isPwCapitalChar);
+        console.log(itHasDigit);
+        console.log(isPwHassSymbol);
+        return (
+          isPwEmpty &&
+          isPwGT12 &&
+          isPwLT3 &&
+          itHasDigit &&
+          isPwSmallChar &&
+          isPwCapitalChar &&
+          isPwHassSymbol
+        );
+      }
+      function validateForm() {
+        validateEmail(emailV);
+        validatePassword(pwValid);
+      }
+    </script>
+  </body>
+</html>
