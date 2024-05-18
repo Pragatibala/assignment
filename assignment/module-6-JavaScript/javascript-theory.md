@@ -941,7 +941,8 @@ CODE/STETMENT
   </head>
   <body>
     <script>
-      let num = 64728;
+      let str = prompt("enter number");
+      let num = parseInt(str);
       console.log("number: ", num);
       let reverseNum = Array.from(String(num)).reverse().join("");
       finalnum = parseInt(reverseNum);
@@ -965,15 +966,17 @@ CODE/STETMENT
   </head>
   <body>
     <script>
-      let num = 1523;
-      console.log("number: ", num);
-      let strg = num.toString();
-      let summation =
-        parseInt(strg[0]) +
-        parseInt(strg[1]) +
-        parseInt(strg[2]) +
-        parseInt(strg[3]);
-      console.log("answer: ", summation);
+      let strg = prompt("enter number");
+      num = parseInt(strg);
+      function sumition(num) {
+        let str = num.toString();
+        let sum = 0;
+        for (let char of str) {
+          sum += parseInt(char);
+        }
+        return sum;
+      }
+      console.log(sumition(num));
     </script>
   </body>
 </html>
@@ -1398,12 +1401,9 @@ Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
   <body>
     <script>
       let arr1 = [1, 2, 3, 4, 5];
-      let arr2 = arr1;
-      console.log(arr1);
+      let arr2 = [...arr1];
       console.log(arr2);
-      arr1.push("6");
-      console.log(arr1);
-      console.log(arr2);
+      console.log(arr1 == arr2);
     </script>
   </body>
 </html>
