@@ -3,14 +3,12 @@
 ## ans:
 
 JavaScript was created to make the web more dynamic. It is a scripting language made to run inside a host environment like a web browser! It provides programmatic control over the objects in that environment. For example, when you click a button and you want something about the webpage to change, you will use JavaScript.
-JavaScript can be client-side and server-side, meaning that it can be used to control user-facing interfaces browsers as well as handle the server-side extensions that connect with a database. It’s a highly versatile and flexible language, favoring configuration over convention. This means that, when you’re working in JavaScript, there are TONS of different ways to accomplish the same task. Sometimes one is better than another, but often there’s not One Right Way to do something. JavaScript has become the most commonly used language of the web
 
 # Q.2: How many type of Variable in JavaScript?
 
 ## ans:
 
-Variable is a container for a value like a number we might use in a sum or a string that we might use as part of a sentence. There are many types of Variable in JavaScript like :
-Number, String, Booleans, Arrays, Objects, Dynamic Types
+Variable is a container for a value like a number we might use in a sum or a string that we might use as part of a sentence. for example
 
 ```javascript
 // 1.Var :
@@ -38,6 +36,26 @@ console.log('rm: 'rm);
 ## ans :
 
 Data types in javascript define the data type that a variable can store. Javascript includes primitive and non-primitive data types. The primitive data types in javascript include string, number, boolean, undefined, null, and symbol. The non-primitive data type includes the object.
+example:
+
+```html
+<body>
+  <script>
+    //string:
+    let str = "hello world";
+    console.log(str);
+
+    //number:
+    let a = 10;
+    console.log(a);
+
+    //boolean:
+    let b = 10;
+    let c = 20;
+    console.log(b == c);
+  </script>
+</body>
+```
 
 # Q.4 : Write a mul Function Which will Work Properly When invoked With Following Syntax.
 
@@ -198,59 +216,77 @@ convert the string into number than make it exactly equal.
 ## ans:
 
 Conditional statements control behavior in JavaScript and determine whether or not pieces of code can run. There are multiple different types of conditionals in JavaScript including: “If” statements: where if a condition is true it is used to specify execution for a block of code.
-IF/ELSE
-The if/else statement executes a block of code if a specified condition is true. If the condition is false, another block of code can be executed. The if/else statement is a part of JavaScript's "Conditional" Statements, which are used to perform different actions based on different conditions.
-syntax:
-if (condition)
-statement1
-// With an else clause
-if (condition)
-statement1
-else
-statement2
+IF/ELSE:
+
+```html
+<body>
+  <script>
+    let a = 5;
+    if ((a = 10)) {
+      console.log("a is equal to 10");
+    } else {
+      console.log("a is not equal to 10");
+    }
+  </script>
+</body>
+```
 
 SWITCH :
-The switch statement executes a block of code depending on different cases. The switch statement is a part of JavaScript's "Conditional" Statements, which are used to perform different actions based on different conditions. Use switch to select one of many blocks of code to be executed.the switch case is same as If else..if statement in javascript.
-syntax:
-switch (expression) {
-case caseExpression1:
-statements
-case caseExpression2:
-statements
-// …
-case caseExpressionN:
-statements
-default:
-statements
-}
+
+```html
+<body>
+  <script>
+    let a = parseInt(prompt("enter the number"));
+    switch (a) {
+      case 0:
+        console.log("Sunday");
+        break;
+      case 1:
+        console.log("Monday");
+        break;
+      case 2:
+        console.log("Tuesday");
+        break;
+      case 3:
+        console.log("Wednesday");
+        break;
+      case 4:
+        console.log("Thursday");
+        break;
+      case 5:
+        console.log("Friday");
+        break;
+      case 6:
+        console.log("Saturday");
+        break;
+      default:
+        console.log("enter numbers 0 to 6");
+    }
+  </script>
+</body>
+```
 
 # Q.11: Find circumference circle formula : C = 4 \* a ?
 
 ## ans:
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="circle">
-      <input type="text" id="a" placeholder="enter area of circle" />
-    </div>
-    <button id="bnt">click for result</button>
-    <p id="ans">Answer :</p>
-    <script>
-      document.getElementById("bnt").addEventListener("click", () => {
-        let area = document.getElementById("a").value;
-        let c = 4 * area;
-        document.getElementById("ans").innerHTML = "Answer: " + c;
-      });
-    </script>
-  </body>
-</html>
+<body>
+  <div class="circle">
+    <input type="text" id="a" placeholder="enter radius of circle" />
+  </div>
+  <button id="bnt">click for result</button>
+  <p id="ans">Answer :</p>
+  <script>
+    document.getElementById("bnt").addEventListener("click", () => {
+      let radius = document.getElementById("a").value;
+      let pi = Math.PI;
+      let c = 2 * pi * radius;
+      console.log(c);
+      document.getElementById("ans").innerHTML = "Answer : " + c;
+    });
+  </script>
+</body>
 ```
 
 # Q.12: WAP to convert years into days and days into years?
@@ -398,50 +434,82 @@ AND(&&) gives true when all conditions will satisfies.And OR (||) gives true whe
 
 LOOP : JavaScript loops are powerful tools for performing repetitive tasks efficiently. loops in javascript execute a block of code again and again while the condition is true. For example, suppose we want to print “Hello World” 5 times. This can be done using JS Loop easily.
 there are many kind of loops in javascript:
-While loop
-For loop
-Do..While loop
-forEach loop
-Map loop
-For..in loop
-For..of loop
 
-while loop : The while statement generates a loop that gets executed over a particular block of statement (code) as long as the condition is true. Every time before executing the block of code the condition gets checked
-syntax :
-initialization;
-while (condition)
-{ increment /decrement
-code/statement
-}
+while loop :
 
-for loop : The while loop and the for loop works exactly same, even the execution time doesn’t differ much. So what is the need of another looping system that delivers same functionality?. well, in case of for loop the declaration & initialization of looping variable, condition checking & increment or decrements of the looping variable can be done in the same line.
-syntax :
-for (initialization; condition; increment / decrement)
-{ code/statement }
+```html
+<body>
+  <script>
+    let count = 0;
+    while (count <= 5) {
+      count++;
+      console.log(count);
+    }
+  </script>
+</body>
+```
 
-do-while : do-while loop is slightly different from while as it includes one extra feature. In case of do-while loop, the block of code gets executed at least once and if further the condition satisfies the code block will be executed accordingly.
-syntax :
-initialization;
-do {
-code/statement
-increment /decrement }
-while (condition)
+for loop :
+
+```html
+<body>
+  <script>
+    for (let count = 0; count <= 5; count++) {
+      console.log(count);
+    }
+  </script>
+</body>
+```
+
+do-while :
+
+```html
+<body>
+  <script>
+    let count = 0;
+    do {
+      console.log(count);
+      count++;
+    } while (count <= 5);
+  </script>
+</body>
+```
 
 SWITCH :
-The switch statement executes a block of code depending on different cases. The switch statement is a part of JavaScript's "Conditional" Statements, which are used to perform different actions based on different conditions. Use switch to select one of many blocks of code to be executed.the switch case is same as If else..if statement in javascript.
-syntax:
-switch (expression) {
-case Expression1:
-statements
-break;
-case Expression2:
-statements
-break;
-case caseExpressionN:
-statements
-default:
-statements
-}
+The switch statement executes a block of code depending on different cases. The switch statement is a part of JavaScript's "Conditional" Statements, which are used to perform different actions based on different conditions.
+
+```html
+<body>
+  <script>
+    let a = parseInt(prompt("enter the number"));
+    switch (a) {
+      case 0:
+        console.log("Sunday");
+        break;
+      case 1:
+        console.log("Monday");
+        break;
+      case 2:
+        console.log("Tuesday");
+        break;
+      case 3:
+        console.log("Wednesday");
+        break;
+      case 4:
+        console.log("Thursday");
+        break;
+      case 5:
+        console.log("Friday");
+        break;
+      case 6:
+        console.log("Saturday");
+        break;
+      default:
+        console.log("enter numbers 0 to 6");
+    }
+  </script>
+</body>
+```
 
 # Q.19: What is the use of isNan function?
 
@@ -471,7 +539,9 @@ isNaN() function returns true if a number is Not-a-Number. and isNaN() function 
 
 ## ans :
 
-AND(&&) gives true when all conditions will satisfies.And OR (||) gives true when any condition will satisfies. In the expression (true && false) || (false && true) will give false because in first condition (true && false) give false and second condition (false && true) also give false , they are not satisfies.
+The AND operator (&&) return TRUE when both operands are TRUE.If either operand is FALSE, it return FALSE.The OR operator (||) return TRUE when at least one operand is TRUE. if both operands are FALSE, it return FALSE.
+EXAMPLE:
+In the expression (true && false) || (false && true) will give FALSE because in first condition (true && false) give false and second condition (false && true) also give false , they are not satisfies.
 
 # Q.21: What is the use of Void (0)?
 
@@ -524,22 +594,23 @@ console.log(void 0);
   </head>
   <body>
     <script>
-      let count = 1;
-      let countvowels = (strg) => {
-        for (let char of strg) {
-          if (
-            char === "a" ||
-            char === "e" ||
-            char === "i" ||
-            char === "o" ||
-            char === "u"
-          ) {
-            count++;
-          }
-        }
-        console.log(count);
-      };
-      countvowels("heyThisIsBtsFromBoyBand");
+      let chart = "i";
+      switch (chart) {
+        case "a":
+        case "e":
+        case "i":
+        case "o":
+        case "u":
+        case "A":
+        case "E":
+        case "I":
+        case "O":
+        case "U":
+          console.log("vowel");
+          break;
+        default:
+          console.log("Consonant");
+      }
     </script>
   </body>
 </html>
@@ -873,6 +944,7 @@ CODE/STETMENT
       let num = 64728;
       console.log("number: ", num);
       let reverseNum = Array.from(String(num)).reverse().join("");
+      finalnum = parseInt(reverseNum);
       console.log("reverse :", reverseNum);
     </script>
   </body>
@@ -1110,20 +1182,30 @@ CODE/STETMENT
   </head>
   <body>
     <script>
-      let strg = parseInt(prompt());
-      function palindrome(strg) {
-        let j = strg.length - 1;
-        let i = 0;
-        while (i < strg.length / 2) {
-          i++;
-          if (strg[i] != strg[j]) {
-            return false;
-          }
-          j--;
-        }
-        return true;
+      function palindrome(num) {
+        let str = num.toString();
+        let reversedStr = str.split("").reverse().join("");
+        return str === reversedStr;
       }
-      alert(palindrome(strg));
+      let numbers = [];
+      let count = 0;
+      while (count < 3) {
+        let input = prompt("Enter number:");
+        let number = parseInt(input);
+        if (!isNaN(input)) {
+          numbers.push(number);
+          count++;
+        } else {
+          console.log("Please enter a valid number.");
+        }
+      }
+      numbers.forEach((num, index) => {
+        if (palindrome(num)) {
+          console.log(`Number ${index + 1} (${num}) is a palindrome.`);
+        } else {
+          console.log(`Number ${index + 1} (${num}) is not a palindrome.`);
+        }
+      });
     </script>
   </body>
 </html>

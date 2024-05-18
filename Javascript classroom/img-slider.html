@@ -11,6 +11,33 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      .slider {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        display: flex;
+      }
+      img {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        left: 30%;
+      }
+      .left {
+        position: absolute;
+        left: 31%;
+      }
+      .right {
+        position: absolute;
+        right: 31%;
+      }
+    </style>
   </head>
   <body>
     <div class="slider">
@@ -37,5 +64,33 @@
     </div>
     <div class="left"><i class="fa-solid fa-angle-left"></i></div>
     <div class="right"><i class="fa-solid fa-angle-right"></i></div>
+    <script>
+      const leftBnt = document.getElementsByClassName("left")[0];
+      const rightBnt = document.getElementsByClassName("right")[0];
+      const sliderImg = document.getElementsByClassName("slider");
+      let sliderImgIndex = 0;
+      leftBnt.addEventListener("click", (e) => {
+        e.preventDefault();
+        sliderImgIndex++;
+        slideLeft();
+        function slideLeft() {
+          for (let i = 0; i < sliderImg.length; i++) {
+            // console.dir(sliderImg[i]);
+            sliderImg[i].style.left = `${sliderImg[i].offsetleft - 0}px`;
+            sliderImg[i].style.left = "-80%";
+          }
+        }
+      });
+      rightBnt.addEventListener("click", (e) => {
+        e.preventDefault();
+        sliderImgIndex--;
+        slideright();
+        function slideright() {
+          for (let i = 0; i < sliderImg.length; i++) {
+            sliderImg[i].style.right = "-80%";
+          }
+        }
+      });
+    </script>
   </body>
 </html>

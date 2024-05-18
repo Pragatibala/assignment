@@ -6,7 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="" onclick="return  validateForm " novalidate>
+    <form action="">
       <input type="email" id="email" placeholder="Enter your email" />
       <p class="error-email"></p>
       <input type="password" id="pw" placeholder="Enter your password" />
@@ -22,12 +22,13 @@
       const passwordMsg = document.getElementsByClassName("error-pw");
       const numMsg = document.getElementsByClassName("error-num");
 
-      // document
-      //   .getElementsByTagName("button")[0]
-      //   .addEventListener("click", () => {
-      //     // validateEmail(emailV);
-      //     validatePassword(pwValid);
-      //   });
+      document
+        .getElementsByTagName("button")[0]
+        .addEventListener("click", (e) => {
+          e.preventDefault();
+          // validateEmail(emailV);
+          validatePassword(pwValid.value);
+        });
       function validateEmail(emailV) {
         let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if (emailV.match(mailformat)) {
@@ -44,46 +45,38 @@
         let isPwEmpty;
         let isPwGT12;
         let isPwLT3;
-        let itHasDigit;
-        let isPwSmallChar;
-        let isPwCapitalChar;
-        let isPwHassSymbol;
+        let itHasDigit = false;
+        let isPwSmallChar = false;
+        let isPwCapitalChar = false;
+        let isPwHassSymbol = false;
         isPwEmpty = pwValid.lenght == 0 ? true : false;
         isPwGT12 = pwValid.lenght >= 12 ? true : false;
         isPwLT3 = pwValid.lenght <= 3 ? true : false;
-        for (i = 0; i < pwValid.lenght; i++) {
-          if ("1234567890".match(pwValid[i])) {
+        for (i = 0; i < pwValid.length; i++) {
+          if ("1234567890".includes(pwValid[i])) {
             itHasDigit = true;
-          } else {
-            itHasDigit = false;
+          }
+          if ("abcdefghijklmnopqrstuvwxyz".includes(pwValid[i])) {
+            isPwSmallChar = true;
+          }
+          if ("ABCDEFGHIJKLMNOPQRSTUVWXYZ".includes(pwValid[i])) {
+            isPwCapitalChar = true;
+          }
+          if ("!@#$%^&*()+_-".includes(pwValid[i])) {
+            isPwHassSymbol = true;
           }
         }
-        if ("abcdefghijklmnopqrstuvwxyz".includes(pwValid[i])) {
-          isPwSmallChar = true;
-        } else {
-          isPwSmallChar = false;
-        }
-        if ("ABCDEFGHIJKLMNOPQRSTUVWXYZ".includes(pwValid[i])) {
-          isPwCapitalChar = true;
-        } else {
-          isPwCapitalChar = false;
-        }
-        if ("!@#$%^&*()+_-".includes(pwValid[i])) {
-          isPwHassSymbol = true;
-        } else {
-          isPwHassSymbol = false;
-        }
-        console.log(isPwEmpty);
-        console.log(isPwGT12);
-        console.log(isPwLT3);
-        console.log(isPwSmallChar);
-        console.log(isPwCapitalChar);
-        console.log(itHasDigit);
-        console.log(isPwHassSymbol);
+        console.log("isPwEmpty: " + isPwEmpty);
+        console.log("isPwGT12: " + isPwGT12);
+        console.log("isPwLT3: " + isPwLT3);
+        console.log("isPwSmallChar: " + isPwSmallChar);
+        console.log("isPwCapitalChar: " + isPwCapitalChar);
+        console.log("itHasDigit: " + itHasDigit);
+        console.log("isPwHassSymbol: " + isPwHassSymbol);
         return (
-          isPwEmpty &&
-          isPwGT12 &&
-          isPwLT3 &&
+          !isPwEmpty &&
+          !isPwGT12 &&
+          !isPwLT3 &&
           itHasDigit &&
           isPwSmallChar &&
           isPwCapitalChar &&
