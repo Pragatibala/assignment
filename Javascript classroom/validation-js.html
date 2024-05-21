@@ -26,18 +26,19 @@
         .getElementsByTagName("button")[0]
         .addEventListener("click", (e) => {
           e.preventDefault();
-          // validateEmail(emailV);
+          validateEmail(emailV.value);
           validatePassword(pwValid.value);
         });
       function validateEmail(emailV) {
         let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if (emailV.match(mailformat)) {
-          // emailMsg.innerText = "Valid email address!";
-          alert("Valid email address!");
+          emailMsg[0].innerText = "Valid email address!";
+          // alert("Valid email address!");
           return true;
         } else {
-          // emailMsg.innerText = "You have entered an invalid email address!";
-          alert("You have entered an invalid email address!");
+          console.log("------");
+          emailMsg[0].innerText = "You have entered an invalid email address!";
+          // alert("You have entered an invalid email address!");
           return false;
         }
       }

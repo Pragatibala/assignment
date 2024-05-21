@@ -6,11 +6,45 @@
     <title>Document</title>
   </head>
   <body>
+    <h1>Marksheet for Information Technology</h1>
+    <br />Enter Marks <br />
+    <br />
+    <br />
+    C language : <input type="text" id="c" /><br /><br />
+    C++ language : <input type="text" id="cl" /><br /><br />
+    Data Base : <input type="text" id="data" /><br /><br />
+    HTML : <input type="text" id="html" /><br /><br />
+    CSS : <input type="text" id="css" /><br /><br />
+    PHP : <input type="text" id="php" /><br /><br />
+    Core Java : <input type="text" id="core" /><br /><br />
+    <button id="bnt">Result</button>
+    <br /><br />
+    <p>Total is : /350</p>
+    <p class="ans">Percentage is : %</p>
+
     <script>
-      let arr1 = [1, 2, 3, 4, 5];
-      let arr2 = [...arr1];
-      console.log(arr2);
-      console.log(arr1 == arr2);
+      document.getElementById("bnt").addEventListener("click", () => {
+        let num1 = document.getElementById("c").value;
+        let num2 = document.getElementById("cl").value;
+        let num3 = document.getElementById("data").value;
+        let num4 = document.getElementById("html").value;
+        let num5 = document.getElementById("css").value;
+        let num6 = document.getElementById("php").value;
+        let num7 = document.getElementById("core").value;
+        let result =
+          parseInt(num1) +
+          parseInt(num2) +
+          parseInt(num3) +
+          parseInt(num4) +
+          parseInt(num5) +
+          parseInt(num6) +
+          parseInt(num7);
+        let result2 = (result / 350) * 100;
+        document.getElementsByTagName("p")[0].innerHTML =
+          "Total is:" + ` ${result}/350 `;
+        document.getElementsByTagName("p")[1].innerHTML =
+          "Percentage is :" + ` ${result2}% `;
+      });
     </script>
   </body>
 </html>

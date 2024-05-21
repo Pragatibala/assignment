@@ -26,19 +26,19 @@
       // 1 0 1
       // 1 0 1 0
       // 1 0 1 0 1
-      // let num = 1;
-      // strg = "";
-      // for (j = 1; j <= 5; j++) {
-      //   for (k = 1; k <= j; k++) {
-      //     if (k % 2 === 0) {
-      //       strg += 0 + " ";
-      //     } else {
-      //       strg += 1 + " ";
-      //     }
-      //   }
-      //   strg += "\n";
-      // }
-      // console.log(strg);
+      let num = 1;
+      strg = "";
+      for (j = 1; j <= 5; j++) {
+        for (k = 1; k <= j; k++) {
+          if (k % 2 === 0) {
+            strg += 0 + " ";
+          } else {
+            strg += 1 + " ";
+          }
+        }
+        strg += "\n";
+      }
+      console.log(strg);
 
       // 1 1 1 1 1
       // 2 1 2 4 8
@@ -46,22 +46,22 @@
       // 4 1 4 16 64
       // 5 1 5 25 125
 
-      str = "";
-      for (i = 1; i <= 5; i++) {
-        for (j = 1; j <= 5; j++) {
-          if (j === 1 || j === 3) {
-            str += i + " ";
-          } else if (j === 2) {
-            str += "1 ";
-          } else if (j === 4) {
-            str += i ** 2 + " ";
-          } else {
-            str += i ** 3 + " ";
-          }
-        }
-        str = str + "\n";
-      }
-      console.log(str);
+      // str = "";
+      // for (i = 1; i <= 5; i++) {
+      //   for (j = 1; j <= 5; j++) {
+      //     if (j === 1 || j === 3) {
+      //       str += i + " ";
+      //     } else if (j === 2) {
+      //       str += "1 ";
+      //     } else if (j === 4) {
+      //       str += i ** 2 + " ";
+      //     } else {
+      //       str += i ** 3 + " ";
+      //     }
+      //   }
+      //   str = str + "\n";
+      // }
+      // console.log(str);
     </script>
   </body>
 </html>

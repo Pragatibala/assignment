@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        /* background-color: black; */
+      }
+
+      .slider {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        width: 100%;
+        position: relative;
+      }
+      .slider > img {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        object-fit: cover;
+      }
+      .box1 {
+        left: 150px;
+      }
+      .box2 {
+        left: 350px;
+      }
+      .box3 {
+        transform: scale(1.2);
+        left: 550px;
+      }
+      .box4 {
+        left: 750px;
+      }
+      .box5 {
+        left: 950px;
+      }
+      .wrapper {
+        display: flex;
+      }
+      .left,
+      .right {
+        position: absolute;
+        top: 250px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: rgb(129, 154, 155);
+        color: black;
+        text-align: center;
+        padding-top: 5px;
+      }
+      .left {
+        left: 45%;
+      }
+      .right {
+        left: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <img
+        class="box box1"
+        src="https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&w=600"
+      />
+      <img
+        class="box box2"
+        src="https://images.pexels.com/photos/459653/pexels-photo-459653.jpeg?auto=compress&cs=tinysrgb&w=600"
+      />
+      <img
+        class="box box3"
+        src="https://images.pexels.com/photos/939331/pexels-photo-939331.jpeg?auto=compress&cs=tinysrgb&w=600"
+      />
+      <img
+        class="box box4"
+        src="https://images.pexels.com/photos/163185/old-retro-antique-vintage-163185.jpeg?auto=compress&cs=tinysrgb&w=600"
+      />
+      <img
+        class="box box5"
+        src="https://images.pexels.com/photos/2983401/pexels-photo-2983401.jpeg?auto=compress&cs=tinysrgb&w=600"
+      />
+    </div>
+    <div class="wrapper">
+      <div class="left"><i class="fa-solid fa-angle-left"></i></div>
+      <div class="right"><i class="fa-solid fa-angle-right"></i></div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      sliderIndex = 3;
+      let boxLeftIndex = 2;
+      $(".left").click((event) => {
+        event.preventDefault();
+        boxLeftIndex++;
+        sliderIndex++;
+        if (sliderIndex <= 5) {
+          slideLeft();
+        } else {
+          sliderIndex = 5;
+        }
+      });
+      $(".right").click((event) => {
+        event.preventDefault();
+        boxLeftIndex--;
+        sliderIndex--;
+        if (sliderIndex >= 1) {
+          slideRight();
+        } else {
+          sliderIndex = 1;
+        }
+      });
+      const boxList = document.getElementsByClassName("box");
+      function slideLeft() {
+        console.log(sliderIndex);
+        for (let i = 0; i < boxList.length; i++) {
+          boxList[i].style.left = `${boxList[i].offsetLeft - 100}px`;
+          boxList[i].style.transform = "scale(1)";
+        }
+        boxList[boxLeftIndex].style.transform = "scale(1.3)";
+      }
+      function slideRight() {
+        for (let i = 0; i < boxList.length; i++) {
+          boxList[i].style.left = `${boxList[i].offsetLeft + 100}px`;
+          boxList[i].style.transform = "scale(1)";
+        }
+        boxList[boxLeftIndex].style.transform = "scale(1.3)";
+      }
+    </script>
+  </body>
+</html>
