@@ -1837,39 +1837,51 @@ Arrays are objects only in javascript. The major difference is that they store t
 
 # Q.66 Find the length of a string without using libraryFunction?
 
-# • What is JavaScript?
+## ans:
+
+# Q.67 What is JavaScript?
 
 ## ans:
 
 JavaScript was created to make the web more dynamic. It is a scripting language made to run inside a host environment like a web browser! It provides programmatic control over the objects in that environment. For example, when you click a button and you want something about the webpage to change, you will use JavaScript.
 JavaScript can be client-side and server-side, meaning that it can be used to control user-facing interfaces browsers as well as handle the server-side extensions that connect with a database.
 
-# • What is the use of isNaN function?
+# Q.68 What is the use of isNaN function?
 
 ## ans:
 
 NaN stands for "Not a Number" and is a value in JavaScript used to represent an undefined or unrepresentable value.
 isNaN() function returns true if a number is Not-a-Number. and isNaN() function converts the value to a number before testing it.
+example:
 
-# • What is negative Infinity?
+`
+console.log(isNaN(NaN)); // true
+console.log(isNaN(123)); // false
+console.log(isNaN("123")); // false (string "123" is converted to the number 123)`
+
+# Q.69 What is negative Infinity?
 
 ## ans:
 
 Negative Infinity is a special numeric value that is returned when an arithmetic operation or mathematical function generates a negative value greater than the largest representable number in JavaScript
 
-# • Which company developed JavaScript?
+# Q.70 Which company developed JavaScript?
 
 ## ans:
 
 JavaScript was created at Netscape Communications by Brendan Eich in 1995. Netscape and Eich designed JavaScript as a scripting language for use with the company's flagship web browser, Netscape Navigator.
 
-# • What are undeclared and undefined variables?
+# Q.71 What are undeclared and undefined variables?
 
 ## ans:
 
 Undeclared variables are those that have not been declared or defined in the current scope, while undefined variables are those that have been declared but not given a value.
 
-# • Write the code for adding new elements dynamically?
+`console.log(a); // a is not declared or defined`
+`let b
+console.log(b); // b is declared but undefined`
+
+# Q.72 Write the code for adding new elements dynamically?
 
 ```html
 <body>
@@ -1883,11 +1895,11 @@ Undeclared variables are those that have not been declared or defined in the cur
 </body>
 ```
 
-# • What is the difference between ViewState and SessionState?
+# Q.73 What is the difference between ViewState and SessionState?
 
 this is not possible as a fronend
 
-# • What is === operator?
+# Q.74 What is === operator?
 
 ## ans:
 
@@ -1912,7 +1924,7 @@ The strict equality (===) operator checks whether its two operands are equal and
 </html>
 ```
 
-# • How can the style/class of an element be changed?
+# Q.75 How can the style/class of an element be changed?
 
 ```html
 <!DOCTYPE html>
@@ -1941,11 +1953,11 @@ The strict equality (===) operator checks whether its two operands are equal and
 </html>
 ```
 
-# • How to read and write a file using JavaScript?
+# Q.76 How to read and write a file using JavaScript?
 
 this is not possible as a fronend
 
-# • What are all the looping structures in JavaScript?
+# Q.77 What are all the looping structures in JavaScript?
 
 ## ans:
 
@@ -1959,7 +1971,20 @@ Map loop
 For..in loop
 For..of loop
 
-# • How can you convert the string of any base to an integer in JavaScript?
+example :
+for loop
+
+```html
+<body>
+  <script>
+    for (let count = 0; count <= 5; count++) {
+      console.log(count);
+    }
+  </script>
+</body>
+```
+
+# Q.78 How can you convert the string of any base to an integer in JavaScript?
 
 ```html
 <script>
@@ -1972,7 +1997,7 @@ For..of loop
 </script>
 ```
 
-# • What is the function of the delete operator?
+# Q.79 What is the function of the delete operator?
 
 ```html
 <script>
@@ -1986,7 +2011,7 @@ For..of loop
 </script>
 ```
 
-# • What are all the types of Pop up boxes available in JavaScript?
+# Q.80 What are all the types of Pop up boxes available in JavaScript?
 
 alert(message): Display a popup box with the specified message with the OK button.
 
@@ -2012,7 +2037,7 @@ confirm(message): Display a popup box with the specified message with OK and Can
 </script>
 ```
 
-# • What is the use of Void (0)?
+# Q.81 What is the use of Void (0)?
 
 ## ans:
 
@@ -2020,7 +2045,7 @@ With void , it tells the browser not to return anything or return undefined. Ano
 javascript:void(0) reference is that sometimes, a link may run some JavaScript
 code in the background, and navigating may be unnecessary.
 
-# • How can a page be forced to load another page in JavaScript?
+# Q.82 How can a page be forced to load another page in JavaScript?
 
 ```html
 <body>
@@ -2035,7 +2060,7 @@ code in the background, and navigating may be unnecessary.
 </body>
 ```
 
-# • What are the disadvantages of using innerHTML in JavaScript?
+# Q.83 What are the disadvantages of using innerHTML in JavaScript?
 
 ## ans:
 
@@ -2043,7 +2068,7 @@ Inner HTML is slow because when we use the inner HTML property in the code it al
 When we have used the event handlers then the event handlers are not automatically attached to the new elements created by innerHTML. To change that, we have to track the event handlers and manually attach them to a new element.
 It means that first, we have to fetch the element property through innerHTML, and then we have to attach them to a new element
 
-# • Create password field with show hide functionalities
+# Q.84 Create password field with show hide functionalities
 
 ```html
 <!DOCTYPE html>
@@ -2058,7 +2083,8 @@ It means that first, we have to fetch the element property through innerHTML, an
       margin: 30px;
     }
     button {
-      width: 10px;
+      width: 40px;
+      text-align: center;
       height: 20px;
       margin: 10px;
     }
@@ -2068,21 +2094,24 @@ It means that first, we have to fetch the element property through innerHTML, an
     }
   </style>
   <body>
-    Enter Password:<input type="password" /><br />
-    <button></button>Show Password
+    Enter Password:<input type="password" placeholder="Enter password" /><br />
+    <button id="bnt"></button>Show Password
   </body>
   <script>
-    let bnt = document.getElementsByTagName("button")[0];
-    bnt.addEventListener("click", (event) => {
+    const bnt = document.getElementsByTagName("button")[0];
+    const inputValue = document.getElementsByTagName("input")[0];
+    bnt.addEventListener("click", () => {
       event.preventDefault();
-      inputValue = document.getElementsByTagName("input")[0];
-      inputValue.setAttribute("type", "text");
+      let type =
+        inputValue.getAttribute("type") === "password" ? "text" : "password";
+      inputValue.setAttribute("type", type);
+      bnt.textContent = type === "password" ? "show" : "hide";
     });
   </script>
 </html>
 ```
 
-# • Create basic math operation in JS
+# Q.85 Create basic math operation in JS
 
 ```html
 <!DOCTYPE html>
@@ -2135,7 +2164,7 @@ It means that first, we have to fetch the element property through innerHTML, an
 </html>
 ```
 
-# • Create result
+# Q.86 Create result
 
 ```html
 <body>
@@ -2183,7 +2212,7 @@ It means that first, we have to fetch the element property through innerHTML, an
 </body>
 ```
 
-# • Create a slider using JavaScript
+# Q.87 Create a slider using JavaScript
 
 ```html
 <!DOCTYPE html>
@@ -2291,12 +2320,20 @@ It means that first, we have to fetch the element property through innerHTML, an
       leftbnt.addEventListener("click", (event) => {
         event.preventDefault();
         boxLeftIndex++;
-        slideLeft();
+        if (boxLeftIndex <= 4) {
+          slideLeft();
+        } else {
+          boxLeftIndex = 4;
+        }
       });
       rightbnt.addEventListener("click", (event) => {
         event.preventDefault();
         boxLeftIndex--;
-        slideRight();
+        if (boxLeftIndex >= 0) {
+          slideRight();
+        } else {
+          boxLeftIndex = 0;
+        }
       });
       function slideLeft() {
         for (let i = 0; i < boxList.length; i++) {
