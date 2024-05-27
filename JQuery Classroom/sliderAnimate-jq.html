@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <style>
       * {
         padding: 0px;
@@ -15,39 +19,50 @@
         flex-direction: column;
         align-items: center;
         position: relative;
-        /* background-color: black; */
       }
-
+      .container {
+        background-color: dimgray;
+        width: 100%;
+        height: 1000px;
+      }
       .slider {
         margin-top: 30px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        height: 150px;
+        height: 300px;
         width: 100%;
-        position: relative;
+        background-color: rgb(199, 191, 181);
+        position: absolute;
+        top: 20px;
+        left: 1px;
       }
       .slider > img {
-        width: 150px;
-        height: 150px;
+        width: 160px;
+        height: 160px;
         position: absolute;
         object-fit: cover;
+        border: 1px solid black;
       }
       .box1 {
+        top: 20px;
         left: 150px;
       }
       .box2 {
+        top: 20px;
         left: 350px;
       }
       .box3 {
-        transform: scale(1.2);
+        top: 20px;
         left: 550px;
       }
       .box4 {
+        top: 20px;
         left: 750px;
       }
       .box5 {
+        top: 20px;
         left: 950px;
       }
       .wrapper {
@@ -56,7 +71,7 @@
       .left,
       .right {
         position: absolute;
-        top: 250px;
+        top: 300px;
         width: 30px;
         height: 30px;
         border-radius: 50%;
@@ -74,31 +89,33 @@
     </style>
   </head>
   <body>
-    <div class="slider">
-      <img
-        class="box box1"
-        src="https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&w=600"
-      />
-      <img
-        class="box box2"
-        src="https://images.pexels.com/photos/459653/pexels-photo-459653.jpeg?auto=compress&cs=tinysrgb&w=600"
-      />
-      <img
-        class="box box3"
-        src="https://images.pexels.com/photos/939331/pexels-photo-939331.jpeg?auto=compress&cs=tinysrgb&w=600"
-      />
-      <img
-        class="box box4"
-        src="https://images.pexels.com/photos/163185/old-retro-antique-vintage-163185.jpeg?auto=compress&cs=tinysrgb&w=600"
-      />
-      <img
-        class="box box5"
-        src="https://images.pexels.com/photos/2983401/pexels-photo-2983401.jpeg?auto=compress&cs=tinysrgb&w=600"
-      />
-    </div>
-    <div class="wrapper">
-      <div class="left"><i class="fa-solid fa-angle-left"></i></div>
-      <div class="right"><i class="fa-solid fa-angle-right"></i></div>
+    <div class="container">
+      <div class="slider">
+        <img
+          class="box box1"
+          src="https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&w=600"
+        />
+        <img
+          class="box box2"
+          src="https://images.pexels.com/photos/459653/pexels-photo-459653.jpeg?auto=compress&cs=tinysrgb&w=600"
+        />
+        <img
+          class="box box3"
+          src="https://images.pexels.com/photos/939331/pexels-photo-939331.jpeg?auto=compress&cs=tinysrgb&w=600"
+        />
+        <img
+          class="box box4"
+          src="https://images.pexels.com/photos/163185/old-retro-antique-vintage-163185.jpeg?auto=compress&cs=tinysrgb&w=600"
+        />
+        <img
+          class="box box5"
+          src="https://images.pexels.com/photos/2983401/pexels-photo-2983401.jpeg?auto=compress&cs=tinysrgb&w=600"
+        />
+      </div>
+      <div class="wrapper">
+        <div class="left"><i class="fa-solid fa-angle-left"></i></div>
+        <div class="right"><i class="fa-solid fa-angle-right"></i></div>
+      </div>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -106,43 +123,42 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      sliderIndex = 3;
-      let boxLeftIndex = 2;
+      $(".container").animate(
+        {
+          height: "1px",
+          width: "1px",
+        },
+        1500
+      );
+      let sliderIndex = 1;
       $(".left").click((event) => {
         event.preventDefault();
-        boxLeftIndex++;
         sliderIndex++;
-        if (sliderIndex <= 5) {
+        if (sliderIndex <= 4) {
           slideLeft();
-        } else {
-          sliderIndex = 5;
         }
       });
       $(".right").click((event) => {
         event.preventDefault();
-        boxLeftIndex--;
-        sliderIndex--;
         if (sliderIndex >= 1) {
+          sliderIndex--;
           slideRight();
-        } else {
-          sliderIndex = 1;
         }
       });
       const boxList = document.getElementsByClassName("box");
       function slideLeft() {
-        console.log(sliderIndex);
         for (let i = 0; i < boxList.length; i++) {
           boxList[i].style.left = `${boxList[i].offsetLeft - 100}px`;
           boxList[i].style.transform = "scale(1)";
+          boxList[sliderIndex].style.transform = "scale(1.3)";
         }
-        boxList[boxLeftIndex].style.transform = "scale(1.3)";
       }
       function slideRight() {
         for (let i = 0; i < boxList.length; i++) {
           boxList[i].style.left = `${boxList[i].offsetLeft + 100}px`;
           boxList[i].style.transform = "scale(1)";
+          boxList[sliderIndex].style.transform = "scale(1.3)";
         }
-        boxList[boxLeftIndex].style.transform = "scale(1.3)";
       }
     </script>
   </body>

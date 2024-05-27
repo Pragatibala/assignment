@@ -1839,6 +1839,29 @@ Arrays are objects only in javascript. The major difference is that they store t
 
 ## ans:
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const str = prompt("Any string");
+      function strlenght(str) {
+        for (count = 0; str[count] !== undefined; count++) {
+          // console.log(count);
+        }
+        return count;
+      }
+      console.log(strlenght(str));
+    </script>
+  </body>
+</html>
+```
+
 # Q.67 What is JavaScript?
 
 ## ans:
