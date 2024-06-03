@@ -346,6 +346,16 @@ JQuery is a javascript library. the purpose of jquery is to make easier to use j
       crossorigin="anonymous"
     ></script>
     <script>
+      const imgSub = document.getElementsByClassName("img")[0];
+      const boxChild = document.getElementsByClassName("box")[0];
+      const wrapParent = document.getElementsByClassName("wrapper")[0];
+      const containerV = document.getElementsByClassName("container")[0];
+      containerV.addEventListener("click", () => {
+        containerV.style.background = "yellowgreen";
+        wrapParent.style.background = "crimson";
+        boxChild.style.background = "aqua";
+        // imgSub.style.background = "aqua";
+      });
       $("img").click(() => {
         $(".img").parents(
           $(".box").css("backgroundColor", "red"),
