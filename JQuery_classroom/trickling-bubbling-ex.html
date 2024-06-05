@@ -38,8 +38,11 @@
   </head>
   <body>
     <div class="container">
+      this is Container
       <div class="wrapper">
+        this is Wrapper
         <div class="box">
+          this is Box
           <div class="img">
             <img
               src="https://images.pexels.com/photos/7420955/pexels-photo-7420955.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -55,28 +58,62 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      $(".container").click(() => {
+        $(".container").css({
+          backgroundColor: "yellowgreen",
+          paddingTop: "10px",
+        });
+      });
+      $(".wrapper").click(() => {
+        $(".wrapper").css({
+          backgroundColor: "yellow",
+          paddingTop: "10px",
+        });
+      });
+      $(".box").click(() => {
+        $(".box").css({
+          backgroundColor: "violet",
+          paddingTop: "10px",
+        });
+      });
+      $(".img").click(() => {
+        $(".img").css("transform", "translate(50px)");
+      });
+
+      // event capturing does not support in jQuery
+
       const imgSub = document.getElementsByClassName("img")[0];
       const boxChild = document.getElementsByClassName("box")[0];
       const wrapParent = document.getElementsByClassName("wrapper")[0];
       const containerV = document.getElementsByClassName("container")[0];
-
-      containerV.addEventListener("click", () => {
-        containerV.style.background = "yellowgreen";
-        wrapParent.style.background = "crimson";
-        boxChild.style.background = "aqua";
-        // imgSub.style.background = "aqua";
-      });
-      $("img").click(() => {
-        $(".img").parents(
-          $(".box").css("backgroundColor", "red"),
-          $(".wrapper").css(
-            "backgroundColor",
-            "blue",
-            $(".container").css("backgroundColor", "green"),
-            $("body").css("backgroundColor", "violet")
-          )
-        );
-      });
+      containerV.addEventListener(
+        "click",
+        (event) => {
+          containerV.style.textAlign = "center";
+        },
+        true
+      );
+      wrapParent.addEventListener(
+        "click",
+        (event) => {
+          wrapParent.style.textAlign = "center";
+        },
+        true
+      );
+      boxChild.addEventListener(
+        "click",
+        (event) => {
+          boxChild.style.textAlign = "center";
+        },
+        true
+      );
+      imgSub.addEventListener(
+        "click",
+        (event) => {
+          imgSub.style.textAlign = "center";
+        },
+        true
+      );
     </script>
   </body>
 </html>
