@@ -42,6 +42,17 @@
         right: 32%;
         font-size: x-large;
       }
+      .indicators {
+        display: flex;
+        justify-content: center;
+      }
+      .indctr {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: gray;
+        margin: 5px;
+      }
     </style>
   </head>
   <body>
@@ -74,43 +85,13 @@
     </div>
     <div class="left"><i class="fa-solid fa-angle-left"></i></div>
     <div class="right"><i class="fa-solid fa-angle-right"></i></div>
-    <script>
-      const leftBnt = document.getElementsByClassName("left")[0];
-      const rightBnt = document.getElementsByClassName("right")[0];
-      const sliderImg = document.getElementsByClassName("slider")[0].children;
-      let sliderImgIndex = 1;
-      leftBnt.addEventListener("click", (e) => {
-        e.preventDefault();
-        sliderImgIndex++;
-        if (sliderImgIndex <= 4) {
-          slideLeft();
-        } else {
-          sliderImgIndex = 1;
-        }
-      });
-      rightBnt.addEventListener("click", (e) => {
-        e.preventDefault();
-        sliderImgIndex--;
-        if (sliderImgIndex >= 1) {
-          slideLeft();
-        } else {
-          sliderImgIndex = 5;
-        }
-      });
-      function slideLeft() {
-        for (let i = 0; i < sliderImg.length; i++) {
-          sliderImg[i].style.transform = `translateX(-${
-            sliderImgIndex * 500
-          }px)`;
-        }
-      }
-      function slideright() {
-        for (let i = 0; i < sliderImg.length; i++) {
-          sliderImg[i].style.transform = `translateX(${
-            sliderImgIndex * 500
-          }px)`;
-        }
-      }
-    </script>
+    <div class="indicators">
+      <div class="indctr"></div>
+      <div class="indctr"></div>
+      <div class="indctr"></div>
+      <div class="indctr"></div>
+      <div class="indctr"></div>
+    </div>
+    <script src="slider.js"></script>
   </body>
 </html>
