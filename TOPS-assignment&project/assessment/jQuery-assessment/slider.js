@@ -10,25 +10,27 @@
         e.preventDefault();
         sliderImgIndex++;
         indicatorIndex++
-        if (sliderImgIndex <= 4) {
+        if (sliderImgIndex <= 5) {
           slideLeft();
           indicator[indicatorIndex].style.backgroundColor='red';
         } else {
           sliderImgIndex = 1;
-          indicatorIndex=0;
+          indicatorIndex = 0;
         }
       });
       rightBnt.addEventListener("click", (e) => {
+        console.log(indicatorIndex);
         e.preventDefault();
         sliderImgIndex--;
-        indicatorIndex--
-        if (sliderImgIndex >= 1) {
+        if (sliderImgIndex >= 0) {
           slideLeft();
           indicator[indicatorIndex].style.backgroundColor='red';
-        } else {
-          sliderImgIndex = 5;
-          indicatorIndex=5;
-        }
+          } else {
+            sliderImgIndex = 5;
+            indicatorIndex = 4;
+            }
+          indicatorIndex--
+            
       });
       function slideLeft() {
         for (let i = 0; i < sliderImg.length; i++) {

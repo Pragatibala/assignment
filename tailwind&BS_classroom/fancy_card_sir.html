@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      class="card max-w-[300px] h-[450px] m-16 rounded-lg font-sans text-slate-800 bg-[url(https://urbantribe.in/cdn/shop/products/2_f56cf1aa-3b0e-4bfd-a29a-80377fac88a2_600x.jpg?v=1625463964)] bg-[length:300px_400px] transition-all duration-300 hover:bg-[url(https://urbantribe.in/cdn/shop/products/05_178c1433-ca5e-4cdf-a348-77d0a1048fe5_600x.jpg?v=1669106301)] relative group"
+    >
+      <div class="menus">
+        <div
+          class="favorite size-10 rounded-full bg-gray-300 hidden group-hover:flex justify-center items-center absolute top-5 right-2 hover:bg-red-400 hover:text-white transition-all duration-300 cursor-pointer"
+        >
+          <i class="fa-regular fa-heart"></i>
+        </div>
+        <div
+          class="eye size-10 rounded-full bg-gray-300 hidden group-hover:flex justify-center items-center absolute top-20 right-2 hover:bg-red-400 hover:text-white transition-all duration-300 cursor-pointer"
+        >
+          <i class="fa-regular fa-eye"></i>
+        </div>
+      </div>
+      <div
+        class="offer py-0.5 px-2 bg-red-500 absolute top-1 left-1 rounded-md text-[12px] text-gray-200"
+      >
+        sale 42%
+      </div>
+      <div
+        class="action w-full bg-slate-100 text-center p-2 absolute transition-all duration-300 -bottom-5 left-0 group-hover:bottom-0 font-semibold rounded-br-lg rounded-bl-lg"
+      >
+        <p class="text-lg">Amigo Backpack</p>
+        <span class="text-red-500">Rs. 1,999.00</span>
+        <span class="line-through">Rs.3,299</span>
+        <div
+          class="cta-btn w-fit mx-auto my-0 hidden group-hover:flex mt-1 px-6 py-2 rounded-md bg-red-400 hover:bg-red-500 transition-all duration-300 text-gray-200 justify-center items-center cursor-pointer"
+        >
+          <i class="fa-solid fa-bag-shopping me-2"></i> Add to cart
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
