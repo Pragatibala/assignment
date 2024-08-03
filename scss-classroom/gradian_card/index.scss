@@ -1,0 +1,53 @@
+$b_yellow:#f8d435;
+$b_red:#f83c37;
+$orange:#f88536;
+$card_radius:24px;
+@mixin gradients($direction:to right,$color1:$b_yellow,$color2:$b_red){
+    background-image: linear-gradient($direction,$color1,$color2);    
+}
+@mixin hover_art($translate:-5px){
+    &:hover {
+        transform: translateY($translate) ;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    } 
+}
+body{
+height: 100vh;
+@include gradients(135deg)
+}
+.card{
+max-width: 650px;
+min-width: 300px;
+background-color: white;
+padding: 40px 20px;
+font-family: 'Roboto', sans-serif;
+border-radius: $card_radius;
+position: relative;
+margin: 40px auto;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+@include hover_art();
+.content{
+    margin-left: 30%;   
+    h4{
+        color: gray;       
+    }    
+    a{        
+        padding: 8px 20px;
+        color: white;
+        border-radius: $card_radius;        
+        @include gradients();
+    @include hover_art(5px);
+        }
+}
+.flot-card{     
+    position: absolute;
+    top: 10%;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    border-radius: $card_radius;   
+    @include gradients(135deg);
+    @include hover_art();
+    }
+}

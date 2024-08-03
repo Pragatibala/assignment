@@ -1,0 +1,126 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.car-card {
+  display: flex;
+  gap: 20px;
+}
+
+.left-card {
+  width: 450px;
+  color: white;
+  background-image: url("card-1.png");
+  background-color: rgb(54, 175, 250);
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+.left-card h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: x-large;
+}
+.left-card p {
+  width: 250px;
+  font-size: medium;
+  margin-bottom: 25px;
+}
+.left-card a {
+  text-decoration: none;
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: rgba(48, 48, 250, 0.729);
+}
+.left-card img {
+  width: 300px;
+  margin-left: 100px;
+}
+
+.right-card {
+  width: 450px;
+  color: white;
+  background-image: url("card-2.png");
+  background-color: rgba(32, 32, 251, 0.886);
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+.right-card h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: x-large;
+}
+.right-card p {
+  width: 250px;
+  font-size: medium;
+  margin-bottom: 25px;
+}
+.right-card a {
+  text-decoration: none;
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: rgb(54, 175, 250);
+}
+.right-card img {
+  width: 250px;
+  margin-left: 150px;
+}
+
+.mini-card {
+  width: 300px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  position: relative;
+  padding: 10px;
+}
+.mini-card h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+.mini-card .icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: red;
+}
+.mini-card span {
+  color: rgba(166, 166, 249, 0.852);
+  font-size: large;
+}
+.mini-card img {
+  width: 250px;
+  margin: 40px 20px;
+}
+.mini-card .details {
+  padding: 5px;
+}
+.mini-card .details span {
+  margin: 5px;
+}
+.mini-card .details span i {
+  margin-right: 5px;
+}
+.mini-card .details a {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: rgb(54, 175, 250);
+  margin: 20px;
+}/*# sourceMappingURL=car_card.css.map */

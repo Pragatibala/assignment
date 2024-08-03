@@ -1,0 +1,32 @@
+/* for mobile */
+@media (max-width: 425px) {
+  nav {
+    visibility: hidden;
+  }
+  .home-menu {
+    display: block;
+    background-color: #827745;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .home-menu .logo {
+    font-size: medium;
+    padding: 10px;
+  }
+  .home-menu .logo h5 {
+    font-size: xx-small;
+  }
+  .bg-ind {
+    position: absolute;
+    left: 50%;
+    top: 250px;
+    z-index: 1;
+    display: flex;
+    gap: 10px;
+  }
+  .bg-ind .indicator {
+    width: 10px;
+    height: 10px;
+  }
+}
