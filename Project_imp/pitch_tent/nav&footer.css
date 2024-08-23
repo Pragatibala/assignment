@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+:root {
+  --primary-bgc: #827745;
+  --secondary-bgc: #282433;
+  --primary-color: #f4983c;
+  --secondary-color: rgb(4, 4, 53);
+  --shadow-color: #fb7f03;
+  --bold-color: #f98007;
+}
+/* header and footer */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  color: var(--primary-color);
+  background-color: var(--primary-bgc);
+  border-bottom: 5px solid var(--primary-color);
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+nav a:hover {
+  color: var(--primary-color);
+}
+.logo a pre {
+  color: white;
+  margin-right: 100px;
+  padding: 20px;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+.logo h5 {
+  font-size: smaller;
+  padding: 4px 8px;
+  color: white;
+  font-weight: lighter;
+  font-family: serif;
+  border-radius: 12px;
+  background-color: var(--primary-color);
+  text-align: center;
+  position: absolute;
+  left: 45%;
+  bottom: -15px;
+}
+/* this is footer */
+.blue-box {
+  height: 200px;
+  background-color: var(--secondary-bgc);
+  background-image: url("https://pitch-tents.co.uk/wp-content/themes/pitchtents/dist/images/cta-bg.png");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.footer h1 {
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+}
+.planning-bnt {
+  color: white;
+  width: 300px;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: 4px double;
+  background-color: var(--bold-color);
+}
+.footer-detail {
+  height: 250px;
+  background-color: var(--primary-bgc);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 4px solid var(--primary-color);
+}
+.foot-menu {
+  width: 250px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0px 20px;
+  font-size: larger;
+}
+.foot-menu a {
+  text-decoration: none;
+  color: white;
+}
+.foot-icon {
+  color: white;
+  font-size: x-large;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}

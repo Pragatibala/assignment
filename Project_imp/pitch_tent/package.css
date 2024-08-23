@@ -1,0 +1,109 @@
+:root {
+  --primary-bgc: #827745;
+  --secondary-bgc: #282433;
+  --primary-color: #f4983c;
+  --secondary-color: rgb(4, 4, 53);
+  --shadow-color: #fb7f03;
+  --bold-color: #f98007;
+}
+
+.package-contain {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  padding: 50px;
+  font-size: large;
+}
+.package-contain h1 pre {
+  margin: 30px;
+  font-size: xx-large;
+}
+.package-contain p {
+  width: 850px;
+  margin: 10px;
+  color: rgba(6, 6, 6, 0.724);
+  text-align: center;
+}
+.review-contain {
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+}
+.review-contain button {
+  margin: auto 80px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  font-size: medium;
+  border-radius: 12px;
+  border: 4px double;
+}
+.three-contain {
+  background-color: #282433;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 100px;
+  text-align: center;
+  border: 5px dotted white;
+  outline: 10px double var(--secondary-bgc);
+}
+.three-contain h1,
+.five-contain h1 {
+  color: #f98007;
+  margin: 20px;
+}
+.three-contain p,
+.four-contain p,
+.five-contain p {
+  width: 800px;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  margin: 20px;
+}
+.three-contain ul,
+.four-contain ul,
+.five-contain ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style-type: none;
+}
+.four-contain {
+  background-color: #f4983c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 100px;
+  text-align: center;
+}
+.four-contain h1 {
+  color: white;
+  margin: 20px;
+}
+.five-contain {
+  background-color: #282433;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 100px;
+  text-align: center;
+  border: 5px dotted white;
+  outline: 10px double var(--secondary-bgc);
+}
+.three-contain ul i,
+.four-contain ul i,
+.five-contain ul i {
+  color: gold;
+  font-weight: bolder;
+}
