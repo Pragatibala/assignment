@@ -1,1 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- bootstrap css link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- bootstrap script link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+      }
+      #template-head {
+        width: 100%;
+        height: auto;
+      }
+      .navbar-links a {
+        text-decoration: none;
+      }
+      .head {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #template-content {
+        width: 100%;
+        height: auto;
+      }
+      .break-point {
+        height: 30px;
+      }
+      #template-slider {
+        width: 100%;
+        height: auto;
+      }
+      .carousel .carousel-item {
+        padding-left: 15%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- template header -->
+    <section id="template-head" class="bg-dark container-fluid pb-5">
+      <!-- template's navbar -->
+      <nav class="row nav navbar-expand-md container-fluid">
+        <a class="col-md-6 navbar-brand m-4 text-white fs-1" href="">LOGO</a>
+        <ul class="col-md-6 navbar-collapse navbar-links">
+          <li><a class="m-3 text-white" href="#about-page">About</a></li>
+          <li><a class="m-3 text-white" href="">Service</a></li>
+          <li><a class="m-3 text-white" href="">Home</a></li>
+          <li><a class="m-3 text-white" href="">Portfolio</a></li>
+          <li><a class="m-3 text-white" href="">Pricing</a></li>
+          <li><a class="m-3 text-white" href="">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- template head -->
+      <div class="head text-white text-center">
+        <h1 class="text-white fs-1 fw-bold">COMPANY</h1>
+        <p class="fs-6 m-1">We specialize in something</p>
+        <div class="input-group w-50">
+          <input
+            type="text"
+            placeholder="search here"
+            class="form-control border border-2 border-secondary"
+          /><button type="button" class="btn btn-secondary">click here</button>
+        </div>
+      </div>
+    </section>
+    <!-- template content -->
+    <section id="template-content" class="container-fluid">
+      <!-- about page -->
+      <div class="row p-3 m-2" id="about-page">
+        <div class="col-md-9">
+          <h2 class="m-4 text-dark text-start fw-bolder">ABOUT COMPANY PAGE</h2>
+          <p class="fs-6 mt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+            assumenda? Doloribus tempora ipsum nemo sunt provident, tempore quos
+            ratione praesentium assumenda natus exercitationem necessitatibus
+            corporis atque deleniti repellat illo nisi.
+          </p>
+          <p class="fs-6 mt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+            voluptatibus repellat maiores praesentium quaerat in, dolores sequi
+            sit error possimus sapiente distinctio voluptates fugiat illum rerum
+            vero facere nemo unde. Facilis laboriosam illum et, eveniet ex
+            accusamus aliquam veniam error non natus quos autem alias pariatur,
+            tempora temporibus placeat sint!
+          </p>
+          <button
+            type="button"
+            class="btn btn-sm btn-secondary border border-1 text-white"
+          >
+            Get to teach
+          </button>
+        </div>
+        <div class="col-md-3 bar-chart">
+          <!-- <i class="bi bi-bar-chart-fill text-info"></i> -->
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQudtK0wew86UhfTESw5EMEwCxDikEs1MyvHw&s"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="break-point w-100 bg-secondary-subtle"></div>
+      <!-- service page -->
+      <div class="container-fluid p-5 text-center text-dark" id="service-page">
+        <h1 class="m-3 fs-1 fw-bold">SERVICES</h1>
+        <p class="m-4 fw-bold">What We Offer</p>
+        <div class="icon row m-5">
+          <div class="col-md-4">
+            <i class="text-danger fs-2 bi bi-power"></i>
+            <h6>POWER</h6>
+            <p class="fs-6 text-center text-secondary">
+              Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <i class="text-danger fs-2 bi bi-chat-square-heart"></i>
+            <h6>LOVE</h6>
+            <p class="fs-6 text-center text-secondary">
+              Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <i class="text-danger fs-2 bi bi-bag-fill"></i>
+            <h6>JOB DONE</h6>
+            <p class="fs-6 text-center text-secondary">
+              Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <i class="text-danger fs-2 bi bi-x-diamond-fill"></i>
+            <h6>GREEN</h6>
+            <p class="fs-6 text-center text-secondary">
+              Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <i class="text-danger fs-2 bi bi-card-list"></i>
+            <h6>CERTIFIED</h6>
+            <p class="fs-6 text-center text-secondary">
+              Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <i class="text-danger fs-2 bi bi-tools"></i>
+            <h6>HARD WORK</h6>
+            <p class="fs-6 text-center text-secondary">
+              Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="break-point w-100 bg-secondary-subtle"></div>
+    </section>
+    <!-- template slider -->
+    <section id="template-slider" class="container-fluid">
+      <!-- portfolio page -->
+      <div class="portfolio-content text-center">
+        <h2 class="mt-5 fs-1 fw-bold">PORTFOLIO</h2>
+        <p class="m-4 fw-bold">What We Have Created</p>
+        <div class="row">
+          <div class="col-md-4 shadow p-3 h-100">
+            <img
+              src="https://images.pexels.com/photos/7859558/pexels-photo-7859558.jpeg?auto=compress&cs=tinysrgb&w=350"
+              alt=""
+            />
+            <h6 class="fw-bolder mt-4">Work</h6>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="col-md-4 shadow p-3 h-100">
+            <img
+              src="https://images.pexels.com/photos/15021653/pexels-photo-15021653/free-photo-of-close-up-of-an-abstract-painting.jpeg?auto=compress&cs=tinysrgb&w=350"
+              alt=""
+            />
+            <h6 class="fw-bolder mt-4">Work</h6>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="col-md-4 shadow p-3 h-100">
+            <img
+              src="https://images.pexels.com/photos/11061241/pexels-photo-11061241.jpeg?auto=compress&cs=tinysrgb&w=350"
+              alt=""
+            />
+            <h6 class="fw-bolder mt-4">Work</h6>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </div>
+      <!-- customer feedback -->
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide text-center text-dark"
+      >
+        <h2 class="mt-5 fw-bold">What Our Customer Say</h2>
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active bg-info"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+            class="bg-info"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+            class="bg-info"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p class="d-block w-75 p-5 m-5 fw-bold">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              recusandae possimus velit accusamus eum expedita! Rerum voluptatum
+              accusamus molestias unde, eius, eveniet nobis pariatur
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="d-block w-75 p-5 m-5 fw-bold">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              recusandae possimus velit accusamus eum expedita! Rerum voluptatum
+              accusamus molestias unde, eius, eveniet nobis
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="d-block w-75 p-5 m-5 fw-bold">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              recusandae possimus velit accusamus eum expedita! Rerum voluptatum
+              accusamus molestias unde, eius
+            </p>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon bg-dark"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden text-dark">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+          class="text-dark"
+        >
+          <span
+            class="carousel-control-next-icon bg-dark"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden text-dark">Next</span>
+        </button>
+      </div>
+      <div class="break-point w-100 bg-secondary-subtle"></div>
+      <!-- pricing page -->
+      <div class="pricing-content container-fluid text-center m-2 p-5">
+        <h2 class="mt-5 fs-1 fw-bold">PRICING</h2>
+        <p class="m-4 fw-bold">Choose a Payment Plan That Works for You</p>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem">
+              <div class="card-body bg-light">
+                <h5 class="card-title m-3 fs-3">BASIC</h5>
+                <h6 class="card-subtitle mb-2 text-dark">Best Products</h6>
+                <p class="card-text text-body-secondary">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Molestias
+                </p>
+                <p class="card-text fw-bold fs-4">$19</p>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-secondary text-dark fw-bolder border-1 border-dark"
+                >
+                  sign up
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem">
+              <div class="card-body bg-light">
+                <h5 class="card-title m-3 fs-3">PRO</h5>
+                <h6 class="card-subtitle mb-2 text-dark">Best Products</h6>
+                <p class="card-text text-body-secondary">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Molestias
+                </p>
+                <p class="card-text fw-bold fs-4">$29</p>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-secondary text-dark fw-bolder border-1 border-dark"
+                >
+                  sign up
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem">
+              <div class="card-body bg-light">
+                <h5 class="card-title m-3 fs-3">PREMIUM</h5>
+                <h6 class="card-subtitle mb-2 text-dark">Best Products</h6>
+                <p class="card-text text-body-secondary">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Molestias
+                </p>
+                <p class="card-text fw-bold fs-4">$49</p>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-secondary text-dark fw-bolder border-1 border-dark"
+                >
+                  sign up
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- template contact  -->
+    <section
+      id="template-contact"
+      class="container-fluid text-center text-dark bg-secondary-subtle"
+    >
+      <h1 class="mt-5 fw-bold pt-5">CONTACT</h1>
+      <div class="row p-5">
+        <div class="col-md-5 text-start">
+          <p>Contact us and get back to you within 24 hours</p>
+          <p><i class="bi bi-geo-alt-fill"></i> Rajkot</p>
+          <p><i class="bi bi-phone-fill"></i> 91-987654321</p>
+          <p>
+            <i class="bi bi-envelope-arrow-down-fill"></i> tops1234@gmail.com
+          </p>
+        </div>
+        <div class="col-md-7 text-start mb-5">
+          <input
+            type="text"
+            placeholder="Enter your name"
+            class="w-50 m-2 p-2 form-control"
+          />
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="w-50 m-2 p-2 form-control"
+          />
+          <textarea
+            name=""
+            placeholder="message"
+            id=""
+            class="w-75 m-2 p-2 form-control"
+          ></textarea>
+          <input
+            type="submit"
+            class="bg-secondary m-2 p-1 border-1 border-dark"
+          />
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d118133.77956216878!2d70.69255357226606!3d22.290085304537417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3959ca248c77c099%3A0xdf5ac10af64ac8ee!2s101%2C%20Aditya%20Complex%2C%20Jalaram%202%20Street%20Number%202%2C%20above%20Sbi%20Bank%2C%20Near%20Indira%20Circle%2C%20Jala%20Ram%20Nagar%2C%20Rajkot%2C%20Gujarat%20360005!3m2!1d22.2901061!2d70.7749552!5e0!3m2!1sen!2sin!4v1727940258188!5m2!1sen!2sin"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+  </body>
+</html>
 
