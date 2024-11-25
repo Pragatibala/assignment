@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-bgc: #827745;
+  --secondary-bgc: #282433;
+  --primary-color: #f4983c;
+  --secondary-color: rgb(4, 4, 53);
+  --shadow-color: #fb7f03;
+  --bold-color: #f98007;
+}
+/* this is header */
+header {
+  position: relative;
+  width: 100%;
+  height: 900px;
+  /* background-color: var(--primary-bgc); */
+}
+nav {
+  height: 100px;
+  padding-left: 70px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  position: absolute;
+  color: white;
+  visibility: visible;
+  z-index: 1;
+  /* left: 0px;
+  top: 0px; */
+}
+.home-menu {
+  visibility: hidden;
+}
+.logo {
+  padding: 20px 50px;
+  margin: 20px 0px;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: large;
+}
+nav a:hover {
+  color: var(--primary-color);
+}
+.bg-img img {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 0px;
+}
+.bg-ind {
+  position: absolute;
+  left: 50%;
+  top: 820px;
+  z-index: 1;
+  display: flex;
+  gap: 10px;
+}
+.bg-ind .indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid var(--bold-color);
+}
+
+@media (min-width: 320) and (max-width: 768px) {
+  nav {
+    visibility: hidden;
+  }
+  header .home-menu {
+    visibility: visible;
+    width: 100%;
+    background-color: var(--primary-bgc);
+    height: 80px;
+    border-bottom: 2px solid var(--bold-color);
+    z-index: 1;
+  }
+}
+/* this is main's welcome part*/
+.welcome-page {
+  width: 100%;
+  border: 10px double;
+  background-color: var(--primary-color);
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 50px 150px;
+  font-size: xx-large;
+  box-shadow: 0px 0px 5px var(--shadow-color);
+}
+.welcome-page > h2 {
+  font-size: larger;
+  color: var(--secondary-color);
+}
+.welcome-page > p {
+  font-size: medium;
+  text-align: center;
+}
+/* details about pitch section */
+.about-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: xx-large;
+  align-items: center;
+}
+.discription {
+  height: 500px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUQfx9ejki-8RXAsjcyGaXKtzWQmdk36z3Vg&s");
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.discription h1 {
+  margin: 40px;
+  color: var(--bold-color);
+  /* box-shadow: 0px 0px 5px var(--shadow-color); */
+}
+.discription p {
+  width: 800px;
+  padding: 30px 40px;
+  text-align: center;
+  font-size: large;
+  border: 5px dotted var(--bold-color);
+  box-shadow: 0px 0px 5px var(--shadow-color);
+}
+.discription .icon i {
+  position: absolute;
+  color: var(--bold-color);
+  border: 2px solid var(--bold-color);
+  border-radius: 50%;
+  padding: 5px;
+  left: 50%;
+  background-color: white;
+  top: 250px;
+  /* font-weight: bolder; */
+  font-size: medium;
+}
+.pitch-step {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  color: var(--bold-color);
+}
+.steps {
+  display: flex;
+  width: 100%;
+  gap: 60px;
+  color: rgba(0, 0, 0, 0.791);
+}
+.step-1,
+.step-2,
+.step-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: medium;
+  gap: 10px;
+}
+.booking-bnt {
+  background-color: var(--bold-color);
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-size: large;
+  border-radius: 12px;
+  border: 4px double;
+  margin: 30px;
+}
+.booking-bnt:hover {
+  font-size: medium;
+  background-color: var(--primary-color);
+  color: var(--secondary-bgc);
+}
+.interest-page {
+  height: 600px;
+  margin: 10px;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--primary-color);
+  font-size: xx-large;
+  background-color: var(--secondary-bgc);
+  border: 5px dotted white;
+  outline: 10px double var(--secondary-bgc);
+}
+.interest-page h1 {
+  margin: 15px;
+  font-size: larger;
+}
+.interest-page h2 {
+  margin: 15px;
+  font-size: x-large;
+  color: white;
+}
+.blue-img-box {
+  display: flex;
+  align-items: center;
+  gap: 200px;
+  font-size: medium;
+}
+.package-pg,
+.tent-pg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.blue-img-box a {
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 15px;
+  font-size: large;
+  border-radius: 12px;
+  border: 4px double;
+}
+.blue-img-box a:hover {
+  background-color: var(--bold-color);
+}
+.campfire-story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+}
+.campfire-story > img {
+  width: 200px;
+  height: 200px;
+  color: white;
+  object-fit: cover;
+}
+.campfire-story h1 {
+  color: var(--bold-color);
+  padding: 10px;
+}
+.camp-box {
+  padding: 20px 50px;
+  margin: 40px;
+  border: 5px double var(--bold-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.camp-box p {
+  width: 800px;
+  margin: 10px 20px;
+  font-size: large;
+  text-align: center;
+}
+.story-bnt {
+  color: white;
+  width: 200px;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: 4px double;
+  font-size: medium;
+  margin: 20px;
+  background-color: var(--bold-color);
+}
+.story-bnt:hover {
+  font-size: smaller;
+  background-color: var(--primary-color);
+  /* color: var(--secondary-bgc); */
+}
+.camp-box i {
+  width: 30px;
+  height: 30px;
+  padding-top: 5px;
+  text-align: center;
+  border-radius: 50%;
+  color: var(--secondary-bgc);
+  position: absolute;
+  top: 40%;
+  margin: 10px;
+  border: 2px solid var(--secondary-bgc);
+}
+.camp-box .left-icon i {
+  left: 15px;
+}
+.camp-box .right-icon i {
+  right: 15px;
+}
+/* footer page */
+
+.blue-box {
+  height: 200px;
+  background-color: var(--secondary-bgc);
+  background-image: url("https://pitch-tents.co.uk/wp-content/themes/pitchtents/dist/images/cta-bg.png");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.footer h1 {
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+}
+.planning-bnt {
+  color: white;
+  width: 300px;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: 4px double;
+  background-color: var(--bold-color);
+}
+.planning-bnt:hover {
+  color: var(--secondary-bgc);
+  background-color: var(--primary-color);
+}
+.footer-detail {
+  border-top: 4px solid var(--primary-color);
+  height: 250px;
+  background-color: var(--primary-bgc);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.foot-menu {
+  width: 250px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0px 20px;
+  font-size: larger;
+}
+.foot-menu a {
+  text-decoration: none;
+  color: white;
+}
+.foot-menu a:hover {
+  color: var(--bold-color);
+}
+.foot-icon {
+  color: white;
+  font-size: x-large;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+.foot-icon i:hover {
+  color: var(--primary-color);
+}
+/* ------------------------------------------- */

@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  height: auto;
+}
+.sliderBox {
+  height: auto;
+}
+.carousel-item img {
+  height: 350px;
+  object-fit: cover;
+}
+main {
+  width: 100%;
+  height: auto;
+}
+.main-content img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}

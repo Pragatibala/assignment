@@ -1,0 +1,154 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+:root {
+  --primary-bgc: #827745;
+  --secondary-bgc: #282433;
+  --primary-color: #f4983c;
+  --secondary-color: rgb(4, 4, 53);
+  --shadow-color: #fb7f03;
+  --bold-color: #f98007;
+}
+.booking-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 50px;
+}
+.booking-box h1 {
+  margin: 30px 0px;
+}
+.booking-box p {
+  font-size: large;
+  width: 800px;
+  color: rgba(0, 0, 0, 0.81);
+}
+.inquiry-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.step-one {
+  background-color: var(--secondary-bgc);
+  width: 100%;
+  color: white;
+  margin: 20px;
+  padding: 50px;
+  border: 3px dotted white;
+  outline: 5px double var(--secondary-bgc);
+}
+.step-one h2,
+h1,
+p {
+  margin: 20px;
+  font-family: "Arimo", sans-serif;
+}
+.ranking-bar {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.ranking-bar .start,
+.one,
+.two,
+.three,
+.four,
+.five,
+.end {
+  width: 100px;
+  height: 20px;
+  border: 1px solid black;
+  background-color: rgb(245, 228, 197);
+}
+.ranking-bar .start {
+  width: 50px;
+  height: 20px;
+  border: 1px solid black;
+  background-color: rgb(245, 228, 197);
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.ranking-bar .end {
+  width: 50px;
+  height: 20px;
+  border: 1px solid black;
+  background-color: rgb(245, 228, 197);
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.step-two {
+  display: flex;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.815);
+}
+.star-contain {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.star-contain button {
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  margin: 20px;
+}
+.step-three {
+  margin-top: 20px;
+  background-image: url("https://pitch-tents.co.uk/wp-content/themes/pitchtents/dist/images/map-bg.jpg");
+  width: 100%;
+  padding: 50px;
+  color: white;
+  font-weight: lighter;
+}
+.form {
+  background-color: var(--secondary-bgc);
+  margin: 30px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border: 5px dotted white;
+  outline: 10px double var(--secondary-bgc);
+}
+.detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  text-align: start;
+}
+.submit {
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 4px double;
+  font-size: larger;
+  background-color: var(--bold-color);
+}
+.submit:hover {
+  font-size: medium;
+  background-color: var(--primary-color);
+}
+li input {
+  margin: 10px 0px;
+  width: 250px;
+  height: 30px;
+}
+.extra {
+  text-align: center;
+}
+textarea {
+  width: 500px;
+  height: 120px;
+  margin: 5px;
+  padding: 10px;
+}
