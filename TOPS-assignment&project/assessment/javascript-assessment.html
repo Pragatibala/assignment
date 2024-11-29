@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #212121;
+      }
+      .container {
+        background-color: #706c6cd8;
+        width: 500px;
+        height: auto;
+        margin: 20px auto;
+        padding: 30px;
+      }
+      h2 {
+        color: black;
+        margin: 10px;
+        text-shadow: 1px 1px 1px chartreuse;
+      }
+      input {
+        margin: 5px;
+        padding: 5px;
+        font-size: large;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+      }
+      button {
+        background-color: rgba(190, 126, 6, 0.73);
+        text-shadow: 1px 1px 1px chartreuse;
+        padding: 5px;
+        border-radius: 6px;
+      }
+      ul {
+        background-color: white;
+        color: black;
+        margin: 5px;
+        padding: 5px;
+        font-size: large;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Add Your To Do List</h2>
+      <input type="text" placeholder="Add new To Do" id="todo" />
+      <button onclick="display()">ADD</button>
+      <ul id="list"></ul>
+    </div>
+    <script>
+      function display() {
+        let toDo = document.getElementById("todo").value;
+        let newlist = document.getElementById("list");
+        let addVal = document.createElement("li");
+        newlist.appendChild(addVal);
+        addVal.innerHTML = toDo;
+      }
+    </script>
+  </body>
+</html>
