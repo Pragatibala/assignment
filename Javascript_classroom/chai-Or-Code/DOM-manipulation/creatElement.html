@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121; color: #fff"></body>
+  <script>
+    //CREATE ELEMNETS
+
+    let div = document.createElement("div");
+    console.log(div);
+    div.className = "maincl";
+    div.id = Math.round(Math.random() * 10 + 1); //for random numbers 10 mul because remove the last no and add 1 for 2 no.(round for single no)
+    div.setAttribute("title", "add title");
+    div.style.color = "white";
+    div.style.backgroundColor = "green";
+    // div.innerHTML = "chai aur code";// you can use this or below
+
+    let addText = document.createTextNode("chai aur code");
+    div.appendChild(addText);
+    //How to ADD in BODY---------------------
+    document.body.appendChild(div);
+
+    //AFTER THIS YOU CAN CREATE FUNCTION OR GIVES PARAMETER FOR TEXT OR COLOR
+    // OR YOU CAN WRITE A LOOP FOR DIFFRENT COLORS
+  </script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #121212;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1 class="title" id="heading">
+        Chai aur Code learning id - heading class-title
+        <span style="display: none">test text</span>
+        <!-- In .textContent the whole text node will show include the hiden part But In .innerText only showes the visible parts -->
+      </h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <input type="password" name="" id="" />
+      <ul>
+        <li class="list-item">one</li>
+        <li class="list-item">two</li>
+        <li class="list-item">three</li>
+        <li class="list-item">four</li>
+      </ul>
+    </div>
+    <script>
+      // document.querySelector('input[type="password"]');
+      let mylist = document.getElementsByClassName("list-item"); //output = HTML Collection
+      let newarr = Array.from(mylist);
+      // console.log(newarr);
+      newarr.forEach(function (li) {
+        li.style.color = "blue";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Background Color Switcher</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .changer {
+        margin: 100px auto 100px;
+        width: 80%;
+        text-align: center;
+      }
+      .button {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        display: inline-block;
+        margin: 10px;
+      }
+      #grey {
+        background-color: grey;
+      }
+      #yellow {
+        background-color: yellow;
+      }
+      #blue {
+        background-color: blue;
+      }
+      #green {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="changer">
+      <h1>Color Scheme Switcher</h1>
+      <span class="button" id="grey"></span>
+      <span class="button" id="yellow"></span>
+      <span class="button" id="blue"></span>
+      <span class="button" id="green"></span>
+      <h3>
+        Try clicking on one of the colors above to change the background color
+        of this page!
+      </h3>
+    </div>
+    <script src="colorchng.js"></script>
+  </body>
+</html>

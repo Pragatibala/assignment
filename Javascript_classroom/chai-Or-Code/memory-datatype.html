@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var a = "Pragati";
+      // b = "Bala";
+      // console.log(a, b);
+      // var c;
+      // anwser = c === "100";
+      // var d;
+      // d == 100;
+
+      // console.log(typeof c);
+      // console.log(typeof b);
+      // console.log(anwser);
+      // console.log(anwser);
+
+      // // a = 10;
+      // console.log("a:", a);
+      // console.log(typeof a);
+      // b = "10";
+      // console.log("b:", b);
+      // console.log(typeof b);
+      // answer = a == b; //checks values, comparison operator
+      // answer = a === b; //checks value as well as types, strict comparison operator
+      // console.log("answer:", answer);
+      // ***************************************************
+      /* MEMORY - there are two type of memory in javascript 
+      1. stack : this is for all primitive data types.
+      2. heap : this is for all non primitive data types.
+      */
+      // STACK
+      // let name = "pragati";
+      // let name2 = name;
+      // console.log(name2); //return value pragati.
+      // name2 = "jungkook";
+      // console.log(name); // return value pragati.(primitive value cahnged , in stack it  copied the value thats why real value didnt change)
+      // console.log(name2); // return value jungkook.
+      // HEAP
+      let obj = {
+        name: "jungkook",
+        age: 24,
+      };
+      let obj2 = obj;
+      // console.log(obj2); // return value -  name: "jungkook",age: 24,
+      obj2.name = "jimin";
+      console.log(obj2.name); // return value - jimin
+      console.log(obj.name); // return value - jimin
+      // NOTE - in heap (non primitive) the referance value will change . because it will change the real value
+    </script>
+  </body>
+</html>

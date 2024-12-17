@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit and Remove Elements</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>JavaScript</li>
+    </ul>
+  </body>
+  <script>
+    function addlang(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`;
+      document.querySelector(".language").appendChild(li);
+    }
+    addlang("typescript"); // its traverse the tree DSA
+
+    //when you append child like this there will be some issue in large data (because it traverse everytime ). for optimize
+    //use this
+    function addOptiLang(langName) {
+      const li = document.createElement("li");
+      // li.appendChild(document.createTextNode(langName)) // *shortcut*
+      const addtext = document.createTextNode(langName);
+      li.appendChild(addtext);
+      document.querySelector(".language").appendChild(li);
+    }
+    addOptiLang("python"); // for optimization
+    addOptiLang("golang"); // for big project
+
+    // EDIT ++++++++++++++++++++++++
+    const secondLang = document.querySelector("li:nth-child(2)");
+    // secondLang.innerHTML = "mojo"; //shortcut
+    const newLi = document.createElement("li");
+    newLi.textContent = "mojo"; // its same as innertext but have some difference
+    secondLang.replaceWith(newLi);
+
+    //EDIT
+    // const firstLang = document.querySelector("li:first-child");
+    // const javaLi = document.createElement("li");
+    // javaLi.textContent = "JAVA";
+    // firstLang.replaceWith(javaLi);
+
+    //EDIT new approach
+
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>Typescript</li>";
+
+    // REMOVE -----------------------
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove(); //remove the last child (golang)
+  </script>
+</html>

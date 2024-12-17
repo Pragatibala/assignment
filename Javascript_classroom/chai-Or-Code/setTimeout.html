@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeout</title>
+  </head>
+  <body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">Stop</button>
+    <script>
+      //setTimeOut this is method it will write after a millisecond
+      // setTimeout(function () {
+      //   console.log("After 2sec it will run");
+      // }, 2000);
+      const name = function () {
+        console.log("Pragati");
+      };
+      const newMsg = function () {
+        document.querySelector("h1").innerHTML = "This Is My Code";
+      };
+      // setTimeout(name, 2000);
+      const changMe = setTimeout(newMsg, 2000);
+      document.querySelector("#stop").addEventListener("click", function () {
+        clearTimeout(changMe);
+        console.log("stopped the change in head");
+      });
+      // clearTimeout() : this method does not work like this ,its need reference
+    </script>
+  </body>
+</html>
