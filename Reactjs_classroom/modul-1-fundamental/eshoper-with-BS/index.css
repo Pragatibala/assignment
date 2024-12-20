@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+}
+#eshopper-header {
+  width: auto;
+  height: auto;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.navbar-links {
+  width: 100%;
+  height: auto;
+  text-transform: uppercase;
+}
+.navbar-links li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 3px 15px;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+}
+#eshopper-slider {
+  width: auto;
+  height: auto;
+}
+.carousel-item img {
+  width: auto;
+  height: 400px;
+  object-fit: fill;
+}
+#eshopper-content {
+  width: auto;
+  height: auto;
+}
+.product img {
+  width: auto;
+  height: 350px;
+  object-fit: contain;
+}
