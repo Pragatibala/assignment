@@ -1,3 +1,52 @@
+## Question 1: What is React.js? How is it different from other JavaScript frameworks and libraries?
+
+### Ans :
+
+**React** :
+
+- It is a JavaScript library created by FaceBook.
+- Use for Building user interface, particularly for single page application.
+- IT is component base and allows developers to create reusable UI component.
+- React.js is faster as compare to JavaScript.
+- React allows you to write HTML-like code in JavaScript, making it easier to design UIs directly in the logic.
+- React create a virtual DOM in memory and reload a part that updated.
+
+**Different from other JavaScript frameworks and libraries?**
+React is a library not a full-fledged framework focused on building UI. Its flexibility, performance, and large ecosystem make it ideal for applications where you want complete control over how things work, unlike frameworks like Angular or Vue, which are more opinionated.
+
+## Question 2: Explain the core principles of React such as the virtual DOM and component based architecture.
+
+### Ans : **Core principle of React**
+
+1. **Virtual DOM :** The Virtual DOM is a lightweight , in memory representation of the real DOM (Document Object Model). React uses this to optimize updates to the UI.
+   **How it work**
+   When the state or data of a React component changes React creates a new Virtual DOM tree.
+   It compares this new Virtual DOM with the previous one using a process called reconciliation.
+   React determines the minimal set of changes (called diffing) and updates only the affected parts of the real DOM.
+
+2. **Component based Architecture :** React applications are built using components, which are reusable and self-contained pieces of UI.
+   **How it work**
+   Reusability: Components can be reused throughout the application, reducing redundancy.
+   Encapsulation: Each component manages its own state and behavior, making the application modular.
+   Hierarchical Structure: Components can be nested, creating a tree-like structure. For example, a "Header" component might contain a "Logo" and "Navigation" component.
+
+## Question 3: What are the advantages of using React.js in web development?
+
+### Ans :
+
+React.js is a powerful library that has become one of the most popular tools for building modern, interactive, and scalable web applications. Its advantages make it a go-to choice for developers
+
+1. Component-Based Architecture
+2. Virtual DOM for High Performance
+3. Declarative UI
+4. Rich Ecosystem and Tooling
+5. Easy Integration with Existing Projects
+6. React Hooks
+7. SEO-Friendliness
+8. Strong Community and Ecosystem
+9. JSX for Intuitive Development
+10. Flexible and Scalable
+
 # COMPONENT
 
 ## Question 1: What are components in React? Explain the difference between functional components and class components.
@@ -68,6 +117,56 @@ class Welcome extends Component {
 
 export default Welcome;
 ```
+
+# JSX (JavaScript XML)
+
+## Question 1: What is JSX in React.js? Why is it used?
+
+### Ans :
+
+JSX (JavaScript XML) is a syntax extension for JavaScript that looks similar to HTML. It allows developers to write HTML-like code directly within JavaScript files. JSX is then transformed into React.createElement() calls, which React uses to create Virtual DOM elements.
+
+**Why is it used**
+Improved Readability and Developer Experience: Writing UI components in a syntax that closely resembles HTML makes the code easier to understand and maintain.
+
+Combines UI and Logic: JSX allows developers to describe how the UI should look (HTML-like structure) and include dynamic logic (JavaScript expressions) in one place.
+
+Component-Based Architecture: JSX makes it easier to define and compose React components, enabling better modularity.
+
+Better Integration with Tools: JSX integrates seamlessly with tools like linters and debuggers, improving developer productivity.
+
+**Advantages of JSX**
+Readable and Intuitive: Familiar HTML-like syntax.
+Dynamic Rendering: Supports embedding JavaScript expressions.
+Error Prevention: Catch errors early during development.
+
+## Question 2: How is JSX different from regular JavaScript? Can you write JavaScript insideJSX?
+
+### Ans :
+
+**JSX different from regular JavaScript**
+JSX is not regular JavaScript it's a syntax extension that lets you write HTML-like code within JavaScript.
+
+1. Syntax
+   JSX Looks like HTML but is written within JavaScript & JavaScript is Pure JavaScript uses functions or objects to represent elements.
+2. Transpilation
+   JSX is not executable by browsers directly. Tools like Babel transpile it into regular JavaScript using React.createElement() calls.
+3. HTML-Like Syntax
+   JSX allows mixing of JavaScript and HTML-like elements, which regular JavaScript doesn't.
+
+**Can You Write JavaScript Inside JSX**
+Yes, we can write JavaScript expressions inside JSX by enclosing them in curly braces {}. This is one of JSX's most powerful features!
+
+## Question 3: Discuss the importance of using curly braces {} in JSX expressions.
+
+### Ans :
+
+Without {}, JSX would not support dynamic or reactive content. Curly braces allow you to insert live data, making UIs interactive.
+Curly braces are used to insert JavaScript variables or expressions into JSX. Without {}, JSX would treat everything as plain text.
+Curly braces allow you to include conditional logic in JSX using expressions like ternary operators
+You can invoke JavaScript functions and insert the returned value into JSX.
+Curly braces enable rendering lists dynamically by using .map() to iterate over an array.
+You can pass JavaScript objects to style components dynamically using curly braces.
 
 # PROPS & STATE
 
