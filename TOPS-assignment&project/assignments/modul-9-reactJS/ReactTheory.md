@@ -211,3 +211,256 @@ You call this.setState() with an object or function that contains the updated st
 ```jsx
 this.setState({ key: value });
 ```
+
+# Routing in React (React Router)
+
+## Question 1: What is React Router? How does it handle routing in single-page applications?
+
+### Ans :
+
+React Router is a popular library in the React ecosystem used for handling routing in single-page applications. It enables you to define multiple routes in your application and navigate between them seamlessly without requiring a full page reload.
+
+- How This Works :
+- Navigation: Clicking on links updates the URL without a page reload from / to /about. Rendering: The Routes component matches the current path (/about) to the defined routes and renders the corresponding component
+  (About).
+- Seamless Experience: The application updates dynamically without refreshing the page, giving the illusion of moving between "pages."
+
+## Question 2: Explain the difference between BrowserRouter, Route, Link, and Switch components in React Router.
+
+### Ans :
+
+- BrowserRouter : Wraps the app to enable routing
+  Provides the context for routing using the History API. All routing components must be inside it.
+
+- Route : Defines a route and its corresponding component
+  Renders the specified component if the URL matches the route's path.
+
+- Link : Creates navigation links
+  Updates the URL without reloading the page, triggering the rendering of the associated route.
+
+- Switch (or Routes) : Ensures only one matching route is rendered
+  Renders the first route that matches the URL. Replaced by Routes in React Router v6.
+
+# Conditional Rendering
+
+## Question 1: What is conditional rendering in React? How can you conditionally render elements in a React component?
+
+### Ans :
+
+Conditional rendering in React means displaying elements or components based on certain conditions. You can achieve this in several ways:
+
+- Using if Statements:
+
+```jsx
+if (condition) {
+  return <ComponentA />;
+} else {
+  return <ComponentB />;
+}
+```
+
+- Using switch Statements (for multiple conditions):
+
+```jsx
+switch (condition) {
+  case "value1":
+    return <ComponentA />;
+  case "value2":
+    return <ComponentB />;
+  default:
+    return <DefaultComponent />;
+}
+```
+
+## Question 2: Explain how if-else, ternary operators, and && (logical AND) are used in JSXfor conditional rendering.
+
+### Ans :
+
+Conditional Rendering in JSX:
+
+- Ternary Operator (? :) : Inline rendering for simpler conditions.
+
+```jsx
+function Example() {
+  return isLoggedIn ? <h1>Welcome Back!</h1> : <h1>Please Log In</h1>;
+}
+```
+
+- Using if Statements: Used outside JSX for handling conditional logic before returning the JSX.
+
+```jsx
+if (condition) {
+  return <ComponentA />;
+} else {
+  return <ComponentB />;
+}
+```
+
+- Logical && : Renders an element only when the condition is true.
+
+```jsx
+function Example() {
+  return isLoggedIn && <h1>Welcome Back!</h1>;
+}
+```
+
+- Using switch Statements (for multiple conditions):
+
+```jsx
+switch (condition) {
+  case "value1":
+    return <ComponentA />;
+  case "value2":
+    return <ComponentB />;
+  default:
+    return <DefaultComponent />;
+}
+```
+
+# Lists and Keys
+
+## Question 1: How do you render a list of items in React? Why is it important to use keys when rendering lists?
+
+### Ans :
+
+You can render a list using the map() method:
+
+```jsx
+const items = ["A", "B", "C"];
+return (
+  <ul>
+    {items.map((item, index) => (
+      <li key={index}>{item}</li>
+    ))}
+  </ul>
+);
+```
+
+- Importance of Keys:
+  1. Uniqueness: Keys help React identify and track items in the list.
+  2. Efficient Updates: They allow React to optimize rendering by only updating the changed items instead of re-rendering the entire list.
+  3. Avoid Bugs: Without unique keys, the app's behavior may be unpredictable.
+
+## Question 2: What are keys in React, and what happens if you do not provide a unique key?
+
+### Ans :
+
+- Keys in React:
+  Keys are unique identifiers used by React to track and manage list items during rendering. They help React efficiently update the DOM by identifying which items have changed, added, or removed.
+  - What Happens Without Unique Keys
+
+1. Performance Issues: React re-renders the entire list instead of only updating the necessary items.
+2. Incorrect UI Behavior: Items may not be updated or reordered correctly, leading to bugs or unexpected behavior.
+3. Warnings: React will show a warning in the console about missing or non-unique keys.
+
+# Forms in React
+
+## Question 1: How do you handle forms in React? Explain the concept of controlled components.
+
+### Ans :
+
+In React, forms are handled using state to manage input values. You update the state on every change in the input field.
+
+- Controlled Components:
+  A controlled component is a form element (like input or textarea) whose value is managed by React state.
+
+Key Concept: The input’s value is tied to state (value prop) and changes using an event handler (onChange).
+
+## Question 2: What is the difference between controlled and uncontrolled components in React?
+
+### Ans :
+
+**Controlled Components :**
+
+- Form elements are controlled by React state.
+- Value is set and updated via React state (value prop).
+- React has full control over the input value.
+- Use Case When you need form validation or data processing.
+  **Uncontrolled Components :**
+
+- Form elements manage their own state using the DOM.
+- Value is accessed using refs (ref attribute).
+- The DOM directly manages the input value.
+- use case When quick implementation is needed with minimal logic.
+
+# Lifecycle Methods (Class Components)
+
+## Question 1: What are lifecycle methods in React class components? Describe the phases of a component’s lifecycle.
+
+### Ans :
+
+**Lifecycle Methods in React Class Components:**
+React class components go through three main phases: Mounting, Updating, and Unmounting.
+
+- Mounting:
+  constructor(): Initializes state and binds methods.
+  static getDerivedStateFromProps(): Updates state based on props.
+  render(): Renders the UI.
+  componentDidMount(): Executes after the component is mounted (e.g., data fetching).
+
+- Updating:
+  static getDerivedStateFromProps(): Updates state when props change.
+  shouldComponentUpdate(): Decides if re-rendering is necessary.
+  render(): Renders the updated UI.
+  getSnapshotBeforeUpdate(): Captures the DOM state before updates.
+  componentDidUpdate(): Runs after the component has re-rendered.
+
+- Unmounting:
+  componentWillUnmount(): Cleans up resources before the component is removed.
+  These methods allow you to manage state, interact with the DOM, and perform side effects during the component’s lifecycle.
+
+## Question 2: Explain the purpose of componentDidMount(), componentDidUpdate(),and componentWillUnmount().
+
+### Ans :
+
+**Purpose of Lifecycle Methods:**
+
+- componentDidMount():
+  Called once, after the component is mounted to the DOM.
+  Ideal for initial data fetching or setting up subscriptions.
+
+- componentDidUpdate():
+  Called after the component updates due to changes in props or state.
+  Used to perform actions after an update, like fetching new data based on updated props.
+
+- componentWillUnmount():
+  Called right before the component is removed from the DOM.
+  Used for cleanup tasks, like removing event listeners or canceling network requests.
+
+# Hooks
+
+## Question 1: What are React hooks? How do useState() and useEffect() hooks work in functional components?
+
+## Question 2: What problems did hooks solve in React development? Why are hooks considered an important addition to React?
+
+## Question 3: What is useReducer ? How we use in react app?
+
+## Question 4: What is the purpose of useCallback & useMemo Hooks?
+
+## Question 5: What’s the Difference between the useCallback & useMemo Hooks?
+
+## Question 6 : What is useRef ? How to work in react app?
+
+# React – JSON-server and Firebase Real Time Database
+
+## Question 1: What do you mean by RESTful web services?
+
+## Question 2: What is Json-Server? How we use in React ?
+
+## Question 3: How do you fetch data from a Json-server API in React? Explain the role of fetch() or axios() in making API requests.
+
+## Question 4: What is Firebase? What features does Firebase offer?
+
+## Question 5: Discuss the importance of handling errors and loading states when working with APIs in React
+
+# Context API
+
+## Question 1: What is the Context API in React? How is it used to manage global state across multiple components?
+
+## Question 2: Explain how createContext() and useContext() are used in React for sharing state.
+
+# State Management
+
+## Question 1: What is Redux, and why is it used in React applications? Explain the core concepts of actions, reducers, and the store.
+
+## Question 2: How does Recoil simplify state management in React compared to Redux?
