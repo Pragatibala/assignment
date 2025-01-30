@@ -278,7 +278,7 @@ switch (condition) {
 
 Conditional Rendering in JSX:
 
-- Ternary Operator (? :) : Inline rendering for simpler conditions.
+- Ternary Operator : Inline rendering for simpler conditions.
 
 ```jsx
 function Example() {
@@ -431,23 +431,101 @@ React class components go through three main phases: Mounting, Updating, and Unm
 
 ## Question 1: What are React hooks? How do useState() and useEffect() hooks work in functional components?
 
+### Ans :
+
+React Hooks are functions that let you use state and other React features in functional components without writing a class. They make it easier to manage component logic and lifecycle.
+
+**useState()**
+
+- Allows you to add state to functional component.
+- Syntax : const [state, setState] = useState('defaultValue')
+- State holds the current value and setState updates the value.
+
+**useEffect**
+
+- Handles side effects like fetching data, subscriptions or manually changing the DOM.
+- Syntax : useEffect (()=>{} , [dependencies])
+- the second parameter ([dependencies]) controls when the effect runs, An empty array means it runs only once when the component mounts.
+
 ## Question 2: What problems did hooks solve in React development? Why are hooks considered an important addition to React?
+
+### Ans :
+
+Hooks solved problems like complex state management, difficulty in reusing stateful logic, and reliance on class components. They allow functional components to manage state and side effects, making code cleaner, more reusable, and easier to maintain. Hooks modernized React development by simplifying the API, eliminating the need for classes in many cases, and improving developer experience.
 
 ## Question 3: What is useReducer ? How we use in react app?
 
+### Ans :
+
+useReducer is a React hook used to manage more complex state logic compared to useState. It works similarly to Redux by allowing you to handle state updates using a reducer function. A reducer function determines how the state should change based on an action.
+
+- When to Use useReducer
+  When your state has complex logic with multiple sub-values.
+  When you need to manage state that depends on the previous state.
+  When you want a more structured approach, especially in large-scale apps.
+
 ## Question 4: What is the purpose of useCallback & useMemo Hooks?
+
+### Ans :
+
+**Purpose of useCallback and useMemo**
+Both useCallback and useMemo are React hooks used to optimize performance by memoizing values or functions to prevent unnecessary re-computation or re-creation.
+
+- useCallback :
+  useCallback memoizes a function so that it is not re-created on every render unless its dependencies change.
+
+- useMemo :
+  useMemo memoizes a computed value to avoid recalculating it on every render unless its dependencies change.
 
 ## Question 5: What’s the Difference between the useCallback & useMemo Hooks?
 
+### Ans :
+
+**useCallback**
+Purpose: Memoizes a function so that it does not get recreated on every render.
+Usage: Used when you need to pass the same callback function to child components or avoid unnecessary re-renders due to function re-creation.
+Return Value: The memoized function.
+
+**useMemo**
+Purpose: Memoizes a computed value (the result of a function) to avoid recalculating it on every render.
+Usage: Used for expensive calculations that depend on certain values.
+Return Value: The memoized result of the function.
+
 ## Question 6 : What is useRef ? How to work in react app?
+
+### Ans :
+
+useRef is a React hook used to create a mutable reference that persists across renders. It provides a way to directly access and interact with DOM elements or store mutable values without triggering re-renders.
+
+- useRef Works in a React App
+  useRef creates an object with a single property, current, which you can use to hold a value or reference.
+  Unlike state, updating the current value does not cause the component to re-render.
 
 # React – JSON-server and Firebase Real Time Database
 
 ## Question 1: What do you mean by RESTful web services?
 
+### Ans :
+
+RESTful web services are web services that follow the principles of REST (Representational State Transfer), an architectural style used to design networked applications. These services communicate using HTTP and are widely used for building APIs.
+
 ## Question 2: What is Json-Server? How we use in React ?
 
+### Ans :
+
+JSON Server is a lightweight and simple tool that provides a fake REST API by serving a local JSON file as a RESTful backend. It is commonly used for prototyping, testing, and developing applications without the need for a full backend server.
+
 ## Question 3: How do you fetch data from a Json-server API in React? Explain the role of fetch() or axios() in making API requests.
+
+### Ans :
+
+To fetch data from a JSON Server API in a React app, you can use either the built-in JavaScript fetch() function or a library like axios(). Both are used to make HTTP requests, but they work slightly differently. Below is an explanation of how to fetch data using both approaches and their roles in making API requests.
+
+**Using fetch()**
+The fetch() function is a built-in browser API used to make HTTP requests. It returns a Promise that resolves to the Response object.
+
+**Using axios()**
+axios is a popular HTTP client library that simplifies making API requests. It provides a more concise and user-friendly syntax compared to fetch().
 
 ## Question 4: What is Firebase? What features does Firebase offer?
 
